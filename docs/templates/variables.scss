@@ -1,0 +1,30 @@
+/* Sass property declarations */
+$primary-color: #ff6c0e;
+$secondary-color: #24619d;
+$tertiary-color: #f4b751;
+$primary-color-light: #f4b751;
+$secondary-color-light: #a7ccbb;
+$tertiary-color-light: #ec9898;
+$primary-color-dark: #0082c7;
+$secondary-color-dark: #e79709;
+$tertiary-color-dark: #3f3f3f;
+
+$font-size: 10pt;
+$font-color: #000;
+
+$code-font-size: 8pt;
+$code-font-family: 'Noto Sans Mono', monospace;
+
+$inline-code-background: #c2d4dd;
+
+$codeblock-label-font-color: white;
+$codeblock-label-background: $primary-color;
+$codeblock-label-border: $primary-color-dark;
+$codeblock-background: $primary-color-light;
+$codeblock-border: $primary-color;
+
+$blockquote-label-font-color: white;
+$blockquote-label-background: $secondary-color;
+$blockquote-label-border: $secondary-color-dark;
+$blockquote-background: $secondary-color-light;
+$blockquote-border: $secondary-color;

@@ -8,7 +8,12 @@
 
 3. The Coordinate Reference System (CRS) for the Mozambique tifs was unknown. In the  "Legenda" (legend) on the Mozambique Hidrogeological Map_South Region image, it is stated "Projeccao Conica Conforme de Lambert" (Lambert Conic Conformal Projection). The Lambert Conic Conformal Projection requires two parallels, a central meridian, and a Datum. The two parallels and the central meridian were obtained from the scanned maps, and then through research the datum was discovered to be the Tete datum (discovered through this [column](https://www.ingentaconnect.com/contentone/asprs/pers/2017/00000083/00000005/art00005?crawler=true&mimetype=application/pdf) by Clifford J. Mugnier for ASPRS.org). A custom CRS was the made using that information.
 
-4. The custom CRS using the Tete datum worked but, due to lack of information on the scanned images, was not accurate for georeferencing. A new custom CRS based on the WGS84 datum was made using the proj4 string: `+proj=lcc +lat_0=0 +lon_0=35.5 +lat_1=-14 +lat_2=-24 +x_0=0 +y_0=0 +datum=WGS84 +untis=m +no_defs`. The new CRS was made to save having to datum transformations in the future. It was then decided that georeferencing would be done using the GAUL dataset for reference points because a graticule transformation was not possible.
+4. The custom CRS using the Tete datum worked but, due to lack of information on the scanned images, was not accurate for georeferencing. A new custom CRS based on the WGS84 datum was made using the proj4 string:
+
+```+proj=lcc +lat_0=0 +lon_0=35.5 +lat_1=-14 +lat_2=-24
++x_0=0 +y_0=0 +datum=WGS84 +untis=m +no_defs```. 
+
+The new CRS was made to save having to datum transformations in the future. It was then decided that georeferencing would be done using the GAUL dataset for reference points because a graticule transformation was not possible.
 
 ### Georeferencing Mozambique Southern Region
 

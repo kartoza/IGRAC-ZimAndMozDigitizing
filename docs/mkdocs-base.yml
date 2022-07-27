@@ -1,0 +1,17 @@
+site_name: IGRAC Digitizing Project
+site_description: "Work notes for digitising hydrogeological resources for Mozambique and Zimbabwe."
+site_author: "Kartoza and IGRAC"
+docs_dir: ./src
+site_dir: ./site
+repo_name: "IGRAC Moz and Zim Hydrogeological Digitizing Project"
+repo_url: "https://github.com/kartoza/IGRAC-ZimAndMozDigitizing"
+edit_uri: "https://github.com/kartoza/IGRAC-ZimAndMozDigitizing/blob/main/docs/"
+copyright: Kartoza and IGRAC
+
+nav:
+        - Home: index.md
+        - Digitising Process: digitising-process.md
+        #- Instances:
+        #          - FreshWaterBiodiversity.org: fbis.md
+        #          - Rwanda Biodiversity Information System: rbis.md
+        #          - Okavango Biodiversity Information System: orbis.md
