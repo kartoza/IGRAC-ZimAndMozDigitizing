@@ -1,3 +1,3 @@
 # IGRAC Digitizing Project for Zimbabwe and Mozambique
 
-![LOGO](../assets/logo.svg)
+![LOGO](../assets/igrac_logo.svg)
