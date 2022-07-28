@@ -109,13 +109,30 @@ A closer look at one of the worse discrepancies:
 
 2. The second iteration of refining Zimbabwe sheet 4 was done using a Thin Plate Spline transformation with 75 GCPS. There were still major discrepancies between the GAUL reference dataset and georeferenced sheet's boundaries. This transformation type also warped the internal polygons of the georeferenced image.
 
-3. After a discussion, it was decided that the Residual Pixels from a Thin plate Spline transformation being zero was a false reading and so a Polynomial 3 transformation was chosen as it gave the best results. 42 GCPs were used with all the Residual Pixels being less than 10. The GCPs can be found [here](gcps/zimbabwe_sheet4_Poly3.points).
+3. After a discussion, it was decided that the Residual Pixels from a Thin plate Spline transformation being zero was a false reading and so a Polynomial 3 transformation was chosen as it gave the best results. 42 GCPs were used with all the Residual Pixels being less than 10 (Point 16 was the GCP with the highest Residual Pixel value of 9.592993). The image below shows the georeferencer and part of the associated GCP table:
+![Zim Sheet 4 Georeferencer](zim_img/zim_sheet4_poly3.png)
+
+   The image below shows the GCPs for Zimbabwe Sheet 4 relative to the GAUL reference dataset over the GLAD Landsat dataset.
+![Zim Sheet 4 GCPs on GAUL](zim_img/zim_sheet4_gcps.png)
+
+The GCPs can be found [here](gcps/zimbabwe_sheet4_Poly3.points).
+
+>There was not a lot of spatial information in the North Western section (Central region of Zimbabwe) of the sheet and the roads that are represented on the scanned map do not intersect with each other as they would in the real world.
 
 ### Refining Zimbabwe Sheet 3
 
 1. The initial refinement of Zimbabwe Sheet 3 was done using a Thin Plate Spline transformation with 29 GCPS. There were significant discrepancies between the GAUL reference dataset and georeferenced sheet's boundaries.
 
-2. The second iteration of refining Zimbabwe Sheet 3 was done using a Polynomial 1 transformation with 11 GCPs. All the Residual Pixels for the GCPs were lower than 10. The GCPs can be found [here](gcps/zimbabwe_sheet3_Poly1.points). A Polynomial 1 transformation was used as it gave the best result out of the transformation types.
+2. The second iteration of refining Zimbabwe Sheet 3 was done using a Polynomial 1 transformation with 11 GCPs. All the Residual Pixels for the GCPs were lower than 10. Despite Sheet 3 having all if its GCPs be lower values than Sheet 4's GCPs it had greater discrepancies along its western boundary.
+![Zim Sheet 3 western boundary discrepancy](zim_img/zim_sheet3_discrepancy.png)
+
+    The image below shows the georeferencer and part of the associated GCP table (Point 7 was the GCP with the highest Residual Pixel value of 1.211239):
+![Zim Sheet 3 Georeferencer](zim_img/zim_sheet3_poly1.png)
+
+   The image below shows the GCPs for Zimbabwe Sheet 4 relative to the GAUL reference dataset over the GLAD Landsat dataset.
+![Zim sheet 3 GCPs on GAUL](zim_img/zim_sheet3_gcps.png)
+
+The GCPs can be found [here](gcps/zimbabwe_sheet3_Poly1.points). A Polynomial 1 transformation was used as it gave the best result out of the transformation types.
 
 >There was not a lot of spatial information in the North Eastern section (Central region of Zimbabwe) of the sheet and the roads that are represented on the scanned map do not intersect with each other as they would in the real world.
 
@@ -123,7 +140,13 @@ A closer look at one of the worse discrepancies:
 
 1. The initial refinement of Zimbabwe sheet 2 was done using a Thin Plate Spline transformation with 53 GCPS. There were significant discrepancies between the GAUL reference dataset and georeferenced sheet's boundaries.
 
-2. The second iteration of refining Zimbabwe Sheet 2 was done using a Polynomial 3 transformation with 27 GCPs. All the Residual Pixels for the GCPs were lower than 10. The GCPs can be found [here](gcps/zimbabwe_sheet2_Poly3.points). A Polynomial 3 transformation was used as it gave the best result out of the transformation types.
+2. The second iteration of refining Zimbabwe Sheet 2 was done using a Polynomial 3 transformation with 27 GCPs. All the Residual Pixels for the GCPs were lower than 10. The image below shows the georeferencer and part of the associated GCP table (Point 18 was the GCP with the highest Residual Pixel value of 9.794608):
+![Zim Sheet 2 Georeferencer](zim_img/zim_sheet2_poly3.png)
+
+   The image below shows the GCPs for Zimbabwe Sheet 2 relative to the GAUL reference dataset over the GLAD Landsat dataset.
+![Zim sheet 2 GCPs on GAUL](zim_img/zim_sheet2_gcps.png)
+
+The GCPs can be found [here](gcps/zimbabwe_sheet2_Poly3.points). A Polynomial 3 transformation was used as it gave the best result out of the transformation types.
 
 >There was not a lot of spatial information in the South Western section (Central region of Zimbabwe) of the sheet and the roads that are represented on the scanned map do not intersect with each other as they would in the real world. The Great Dyke was used where it was clear that a GCP could be placed.
 
@@ -131,13 +154,19 @@ A closer look at one of the worse discrepancies:
 
 1. The initial refinement of Zimbabwe sheet 1 was done using a Thin Plate Spline transformation with 53 GCPS. There were significant discrepancies between the GAUL reference dataset and georeferenced sheet's boundaries.
 
-2. The second iteration of refining Zimbabwe Sheet 1 was done using a Polynomial 1 transformation with 23 GCPs. All the Residual Pixels for the GCPs were lower than 10. The GCPs can be found [here](gcps/zimbabwe_sheet1_Poly1.points). A Polynomial 1 transformation was used as it gave the best result out of the transformation types. Lake Kariba would have been ideal for reference points, however in the years since the map was published Lake Kariba's water level has lowered significantly and the shoreline has changed.
+2. The second iteration of refining Zimbabwe Sheet 1 was done using a Polynomial 1 transformation with 23 GCPs. A Polynomial 1 transformation was used as it gave the best result out of the transformation types. Lake Kariba would have been ideal for reference points, however in the years since the map was published Lake Kariba's water level has lowered significantly and the shoreline has changed. All the Residual Pixels for the GCPs were lower than 10 (Point 17 was the GCP with the highest Residual Pixel value of 7.111510).
+![Zim Sheet 1 Georeferencer](zim_img/zim_sheet1_poly1.png)
+
+    The image below shows the GCPs for Zimbabwe Sheet 1 relative to the GAUL reference dataset over the GLAD Landsat dataset.
+![Zim Sheet 1 GCPs on GAUL](zim_img/zim_sheet1_gcps.png)
+
+The GCPs can be found [here](gcps/zimbabwe_sheet1_Poly1.points).
 
 >There was some clear spatial information in the South Eastern section (Central region of Zimbabwe) of the sheet and the roads that are represented on the scanned map do not intersect with each other as they would in the real world. The Shangani River was used where it was clear that GCPs could be placed.
 
 ### Checking Alignment of Zimbabwe sheets
 
 <!--Need to add more to this section-->
-Due to the nature of the scanned maps, there are discrepancies where the sheets interact with eachother and there was a lack of reference information to be used for GCPs. Namely where the four sheets meet in the central area of Zimbabwe.
-
-![Zimbabwe Discrepancies Image]()
+Due to the nature of the scanned maps, there are discrepancies where the sheets interact with eachother and there was a lack of reference information to be used as GCPs. The main discrepncies are where the four sheets meet in the central area of Zimbabwe. The discrepancies and their respective measurements are highlighted using the same coloured lines in the image below. The discrepancies between sheets edges get smaller closer to the country boundary of Zimbabwe due to there being multiple GCPs along the administration boundary.
+<!-- The largest discrepancy is 2.52 km which would be an error of 2.5 mm on the original map-->
+![Zimbabwe Discrepancies Image](zim_img/zim_sheets_intersection.png)
