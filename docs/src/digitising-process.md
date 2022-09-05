@@ -180,3 +180,5 @@ The solution to this issue was to stitch the images together in an external soft
 ![Zim Stitched and GCPs](zim_img/zim_stitched_gcps.png)
 
 All the Residual Pixels for the GCPs were less than 10 (Point 0 having the highest residual pixel value of 9.662356). This image gave the best result of the georeferencing so was used for the digtization process.
+
+The GCPs can be found [here](gcps/zim_stitched_poly3.points).
