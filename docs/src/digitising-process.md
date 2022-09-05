@@ -170,3 +170,13 @@ The GCPs can be found [here](gcps/zimbabwe_sheet1_Poly1.points).
 Due to the nature of the scanned maps, there are discrepancies where the sheets interact with eachother and there was a lack of reference information to be used as GCPs. The main discrepncies are where the four sheets meet in the central area of Zimbabwe. The discrepancies and their respective measurements are highlighted using the same coloured lines in the image below. The discrepancies between sheets edges get smaller closer to the country boundary of Zimbabwe due to there being multiple GCPs along the administration boundary.
 <!-- The largest discrepancy is 2.52 km which would be an error of 2.5 mm on the original map-->
 ![Zimbabwe Discrepancies Image](zim_img/zim_sheets_intersection.png)
+
+### Refining Zimbabwe Georeferencing
+
+It was noticed that the original images provided were already warped before any form of georeferencing took place. This meant that the original images didn't line up correctly with eachother. This issue meant that the original georeferencing had major discrepancies in the central region of Zimbabwe.
+
+The solution to this issue was to stitch the images together in an external software (Inkscape) and then georeference this stitched image. The stitched together image and its associated GCPs looked like this:
+
+![Zim Stitched and GCPs](zim_img/zim_stitched_gcps.png)
+
+All the Residual Pixels for the GCPs were less than 10 (Point 0 having the highest residual pixel value of 9.662356). This image gave the best result of the georeferencing so was used for the digtization process.
