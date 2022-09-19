@@ -9,8 +9,8 @@
    [here](https://geonode.wfp.org/geoserver/wfs?format_options=charset%3AUTF-8&typename=geonode%3Aadm1_gaul_2015&outputFormat=SHAPE-ZIP&version=1.0.0&service=WFS&request=GetFeature)
    .
 
-3. The Coordinate Reference System (CRS) for the Mozambique geotiff's was unknown.
-   In the  "Legenda" (legend) on the Mozambique Hydrological Map_South Region image,
+3. The Coordinate Reference System (CRS) for the Mozambique geotiff was unknown.
+   In the  `Legenda (legend)` on the `Mozambique Hydrological Map_South Region` image,
    it is stated "Projeccao Conica Conforme de Lambert" (Lambert Conic Conformal Projection).
    The Lambert Conic Conformal Projection requires two parallels, a central meridian, and a Datum.
    The two parallels and the central meridian were obtained from the scanned maps, and then through research the
@@ -45,32 +45,32 @@ The methods below describe the different parameters that were tested with the ra
    The resulting image ended up being too different to the reference dataset spatially and so was immediately discarded.
    ![Mozambique South Attempt 1](moz_img/MozSouth_attempt1.png)
 
-2. The second iteration was done using a Helmert transformation and gave a decent result but there were far too many
+2. The second iteration was done using a `Helmert transformation` and gave a decent result but there were far too many
    discrepancies between the reference layer and the georeferenced image.
 
-3. The third iteration was done using the Helmert Transform again but with all Residual pixels for the
+3. The third iteration was done using the `Helmert Transformation` again but with all Residual pixels for the
    Ground Control Points (CPs) being under 10. 9 GCPS were used for the referencing. There were too many discrepancies
    between the reference dataset and the georeferenced image, so it was disregarded as a viable image.
 
-4. The fourth iteration was done using a Polynomial 1 Transformation (with all residual pixels less than 10) and
+4. The fourth iteration was done using a `Polynomial 1 Transformation` (with all residual pixels less than 10) and
    12 GCPs. Again, there were too many discrepancies between the reference dataset and the georeferenced image but
    there was minimal warping on the polygons.
 
-5. The fifth iteration was done using a Polynomial 2 Transformation (with all residual pixels less than 10) and 17
+5. The fifth iteration was done using a `Polynomial 2 Transformation` (with all residual pixels less than 10) and 17
    GCPs. There were fewer discrepancies between the reference dataset and the georeferenced image than in the previous
    iterations but there was slight warping on the polygons.
 
-6. The sixth iteration was done using a Polynomial 3 Transformation (with all residual pixels less than 10) and 18
+6. The sixth iteration was done using a `Polynomial 3 Transformation` (with all residual pixels less than 10) and 18
    GCPs. There were fewer discrepancies between the reference dataset and the georeferenced image than in the previous
    iterations but there was warping on the polygons.
 
-7. The seventh iteration was done using a Thin Plate Spline transformation. All residual pixels were zero but this was
+7. The seventh iteration was done using a `Thin Plate Spline transformation`. All residual pixels were zero but this was
    likely a false result. This iteration had the best results for lining up the georeferenced image with the reference
    dataset. 102 GCPs were used to help correct discrepancies from previous iterations. The issue with this
    transformation
    was the significant warping of the polygons in the georeferenced image.
 
-8. For the last iteration, it was decided that the Polynomial 1 transformation warped the internal polygons of
+8. For the last iteration, it was decided that the `Polynomial 1 transformation` warped the internal polygons of
    Mozambique's Southern Region the least but more GCPs would help with the discrepancies between the reference dataset
    and the tif. 55 GCPs, with residual pixels lower than 10, were used for the georeferencing and ended up with the best
    result. The image below shows the georeferencer with the GCPs on the map and the GCP table showing the residuals
@@ -91,16 +91,16 @@ from georeferencing the Southern Region. The first 2 iterations were also done b
 georeferencing the Zouth Region of Mozambique so were done before it was decided that using the Thin Plate Spline
 transformation was providing false results.
 
-1. The first iteration was done using the Thin Plate Spline transformation where all the residual pixels were a false
+1. The first iteration was done using the `Thin Plate Spline transformation` where all the residual pixels were a false
    zero. 10 GCPs were used and resulted in good approximation that had some discrepancies between the georeferenced
    image
    and the reference dataset.
 
-2. The second iteration also used the Thin Plate Spline transformation. All the Residual Pixels were zero. Points were
+2. The second iteration also used the `Thin Plate Spline transformation`. All the Residual Pixels were zero. Points were
    added to the previous attempt's GCPs to total 201 GCPs. The Northern Region of Mozambique had many small islands and
    outlying points that had to be 'forced' into the correct place.
 
-3. The last iteration of georeferencing Mozambique's Northern Region was done using a Polynomial 3 transformation
+3. The last iteration of georeferencing Mozambique's Northern Region was done using a `Polynomial 3 transformation`
    with 149 GCPs. All the Residual Pixels for the GCPs were under 10. A polynomial 3 transformation was chosen as it
    warped the image the least but had the fewest discrepancies between the reference dataset and the georeferenced
    image. The image below shows the georeferencer with the GCPs on the map and the GCP table showing the residuals being
@@ -115,7 +115,7 @@ transformation was providing false results.
 ### Checking Alignment of georeferenced Mozambique Images
 
 <!--Need to add more to this section-->
-Due to the nature of the scanned maps, there are slight discrepancies where the sheets meet eachother but they are
+Due to the nature of the scanned maps, there are slight discrepancies where the sheets meet each other but they are
 minimal.
 
 ![Mozambique join between sheets](moz_img/maps_join.png)
@@ -162,29 +162,29 @@ discrepancy at map scale = 3.4 mm error on the original map?-->
 
 ### Georeferencing Zimbabwe Sheets 1 through 4
 
-1. The first iteration of georeferencing Zimbabwe Sheet 1 was done using a Thin Plate Spline transformation using 11
+1. The first iteration of georeferencing Zimbabwe Sheet 1 was done using a `Thin Plate Spline transformation` using 11
    GCPS. There were multiple discrepancies between the georeferenced image and the reference image.
 
-2. The first iteration of georeferencing Zimbabwe Sheet 2 was done using a Thin Plate Spline transformation using 12
+2. The first iteration of georeferencing Zimbabwe Sheet 2 was done using a `Thin Plate Spline transformation` using 12
    GCPS. There were multiple discrepancies between the georeferenced image and the reference image.
 
-3. The first iteration of georeferencing Zimbabwe Sheet 3 was done using a Thin Plate Spline transformation using 8
+3. The first iteration of georeferencing Zimbabwe Sheet 3 was done using a `Thin Plate Spline transformation` using 8
    GCPS. There were multiple discrepancies between the georeferenced image and the reference image.
 
-4. The first iteration of georeferencing Zimbabwe Sheet 4 was done using a Thin Plate Spline transformation using 12
+4. The first iteration of georeferencing Zimbabwe Sheet 4 was done using a `Thin Plate Spline transformation` using 12
    GCPS. There were multiple discrepancies between the georeferenced image and the reference image. It was the best
    result of the initial georeferencing attempts so will be refined first and then used as a basis for the other images.
 
 ### Refining Zimbabwe Sheet 4
 
-1. The initial refinement of Zimbabwe sheet 4 was done using a Thin Plate Spline transformation with 46 GCPS. There were
+1. The initial refinement of Zimbabwe sheet 4 was done using a `Thin Plate Spline transformation` with 46 GCPS. There were
    still discrepancies between the GAUL reference dataset and the georeferenced sheet's boundaries.
 
-2. The second iteration of refining Zimbabwe sheet 4 was done using a Thin Plate Spline transformation with 75 GCPS.
+2. The second iteration of refining Zimbabwe sheet 4 was done using a `Thin Plate Spline transformation` with 75 GCPS.
    There were still major discrepancies between the GAUL reference dataset and georeferenced sheet's boundaries. This
    transformation type also warped the internal polygons of the georeferenced image.
 
-3. After a discussion, it was decided that the Residual Pixels from a Thin plate Spline transformation being zero was a
+3. After a discussion, it was decided that the Residual Pixels from a `Thin plate Spline transformation` being zero was a
    false reading and so a Polynomial 3 transformation was chosen as it gave the best results. 42 GCPs were used with all
    the Residual Pixels being less than 10 (Point 16 was the GCP with the highest Residual Pixel value of 9.592993). The
    image below shows the georeferencer and part of the associated GCP table:
@@ -201,10 +201,10 @@ The GCPs can be found [here](gcps/zimbabwe_sheet4_Poly3.points).
 
 ### Refining Zimbabwe Sheet 3
 
-1. The initial refinement of Zimbabwe Sheet 3 was done using a Thin Plate Spline transformation with 29 GCPS. There were
+1. The initial refinement of Zimbabwe Sheet 3 was done using a `Thin Plate Spline transformation` with 29 GCPS. There were
    significant discrepancies between the GAUL reference dataset and georeferenced sheet's boundaries.
 
-2. The second iteration of refining Zimbabwe Sheet 3 was done using a Polynomial 1 transformation with 11 GCPs. All the
+2. The second iteration of refining Zimbabwe Sheet 3 was done using a `Polynomial 1 transformation` with 11 GCPs. All the
    Residual Pixels for the GCPs were lower than 10. Despite Sheet 3 having all if its GCPs be lower values than Sheet
    4's GCPs it had greater discrepancies along its western boundary.
    ![Zim Sheet 3 western boundary discrepancy](zim_img/zim_sheet3_discrepancy.png)
@@ -217,7 +217,7 @@ The GCPs can be found [here](gcps/zimbabwe_sheet4_Poly3.points).
    dataset.
    ![Zim sheet 3 GCPs on GAUL](zim_img/zim_sheet3_gcps.png)
 
-The GCPs can be found [here](gcps/zimbabwe_sheet3_Poly1.points). A Polynomial 1 transformation was used as it gave the
+The GCPs can be found [here](gcps/zimbabwe_sheet3_Poly1.points). A `Polynomial 1 transformation` was used as it gave the
 best result out of the transformation types.
 
 > There was not a lot of spatial information in the North Eastern section (Central region of Zimbabwe) of the sheet and
