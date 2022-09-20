@@ -367,6 +367,15 @@ combined.
 * Overlay with some standard open data. Vector data could be from OSM and any raster imagery.
 
 ## QA for digitized vector layers
+
+The following checks were carried out.
+
+* Duplicate checks and Geometry validity
+* Attribute table QA
+* Topology checker
+
+### Topology checker
+
 This primarily focuses on establishing if the vector features follow the vector topological model. Topology is a set of 
 rules that model the relationships between neighboring points, lines, and polygons and determines how they 
 share geometry.
@@ -386,7 +395,7 @@ and linear features must appear in one layer, common boundaries should be digiti
 that is also a line (e.g., a road which is also a field boundary), should be digitized as a boundary to complete 
 the area(s), and a boundary which is functionally also a line should be labeled as a line by a distinct category number.
 
-## Snapping options
+#### Snapping options
 
 QGIS provides some snapping tools which allow digitized vector data to follow the topological model.
 
@@ -396,5 +405,67 @@ Project snapping options
 ![generic snapping options](./images/generic_snapping.png)
 
 *TODO* Jeremy to add snapping description here
+
+#### Topology checker Plugin
+
+#### Geometry checker Plugin
+
+
+### Duplicate checks and Geometry validity
+
+They are two modalities for duplicates:
+
+* Duplicate by attribute table
+* Duplicate by geometry values
+
+In our case we are interested in checking for duplicates by geometry. This will show us if we have two features that
+are captured at the same location. The default setting in QGIS is to run algorithms which adhere to the simple feature
+specification ( valid geometry). 
+
+1. In this case we had to run the algorithm `Fix geometries`
+![Fix Geometries](./images/fix-geometries.png)
+2. This was followed by running the algorithm `delete duplicate geometries` from the vector layers.
+![img.png](./images/delete-geometries.png)
+
+#### Check Duplicates by Symbology
+Once all the duplicated features are removed from the vector features, we additionally checked for duplicates using
+[QGIS Symbology](https://kartoza.com/blog/qgis/finding-and-fixing-topology-and-geometry-errors-in-qgis)
+
+#### Check Duplicates by SQL
+
+We ran some additional SQL commands in the `DBManager` to check for duplicates.
+
+```sql
+select geom, count(*)
+from geology_lines
+group by geom
+HAVING count(*) > 1
+
+```
+
+This was run against all the layers that were generated for the Zimbabwe and Mozambique vector layers.
+
+### Attribute table QA
+This check was done in the geopackage database to check if all the values are stored with the correct values.
+Since in the QGIS projects the values are linked by lookup tables.
+
+**Lookup table in QGIS**
+
+![Lookup values](./images/lookup-features.png)
+
+**Actual values in the geopackage**
+
+![db features](./images/db-features.png)
+
+### Zimbabwe vector features
+
+The image below depicts the vectorised features.
+![Zimbabwe Vector Features](./images/zim-digitized.png)
+
+#### Geology Lines
+
+A total of 9259 features were captured.
+
+
 ## QA for cartography
 
