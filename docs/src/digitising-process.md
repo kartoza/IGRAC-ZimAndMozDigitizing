@@ -1,45 +1,79 @@
 # IGRAC: Georeferencing Methodology
 
+The objectives of this project are:
+
+* To georeference the geological maps from Zimbabwe and Mozambique.
+* Digitize the georeferenced sheets capturing the primary features on the sheets.
+* Symbolize the vector features that have been captured. 
+
+The primary software that will be used for this is QGIS. The tasks in this project will be split into the three distinct 
+sections based on the aims mentioned above.
+
+## Georeferencing MapSheets
+
+The map sheets covers Zimbabwe and Mozambique. The methodology used to georeference and digitize the features will 
+largely depend on the quality of the provided map sheets. The process of georeferencing the maps depends on several
+factors:
+
+* What is the spatial resolution of the current map sheets.
+* What is the date at which the map sheets were acquired (produced)
+* Coordinate reference system of the map sheets.
+* What transformation algorithm to use. QGIS provides plenty of these and detailed explanation cen be found from
+[Georef transformation algorithms](https://docs.qgis.org/testing/en/docs/user_manual/working_with_raster/georeferencer.html?highlight=georeferencer#available-transformation-algorithms)
+
+For more information about the QGIS Georeferencing can be found on the [QGIS Documentation website](https://docs.qgis.org/testing/en/docs/user_manual/working_with_raster/georeferencer.html?highlight=georeferencer#id7)
+
 ## Mozambique
 
-1. Create a QGIS project for Mozambique and import the `Mozambique Hydrological Map_North Region` and `Mozambique
-   Hydrological Map_South Region` geotiff into the project.
+There are two map sheets which are provided
+* Southern Sheet
+* Northern Sheep
 
-2. Find the GAUL dataset, as this was the suggested reference dataset. The dataset was downloaded from
-   [here](https://geonode.wfp.org/geoserver/wfs?format_options=charset%3AUTF-8&typename=geonode%3Aadm1_gaul_2015&outputFormat=SHAPE-ZIP&version=1.0.0&service=WFS&request=GetFeature)
-   .
+The georeferencing process will likely be the same on these two sheets.
 
-3. The Coordinate Reference System (CRS) for the Mozambique geotiff was unknown.
-   In the  `Legenda (legend)` on the `Mozambique Hydrological Map_South Region` image,
-   it is stated "Projeccao Conica Conforme de Lambert" (Lambert Conic Conformal Projection).
-   The Lambert Conic Conformal Projection requires two parallels, a central meridian, and a Datum.
-   The two parallels and the central meridian were obtained from the scanned maps, and then through research the
-   datum was discovered to be the Tete datum (discovered through this
-   [column](https://www.ingentaconnect.com/contentone/asprs/pers/2017/00000083/00000005/art00005?crawler=true&mimetype=application/pdf)
-   by Clifford J. Mugnier for ASPRS.org). A custom CRS was the made using that information.
+### Analysis of map sheets before georeferencing
 
-4. The custom CRS using the Tete datum worked but, due to lack of information on the scanned images, was not accurate
-   for georeferencing. A new custom CRS based on the WGS84 datum was made using the proj4 string:
+After loading the raster images (`Mozambique Hydrological Map_North Region` and `Mozambique Hydrological Map_South Region` geotiff) 
+into QGIS and doing some investigation. The following conclusion were established:
 
-```
-+proj=lcc +lat_0=0 +lon_0=35.5 +lat_1=-14 +lat_2=-24 +x_0=0 +y_0=0 +datum=WGS84 +untis=m +no_defs
-```
+* The Coordinate Reference System (CRS) for the Mozambique geotiff was unknown. In the  `Legenda (legend)` on 
+the `Mozambique Hydrological Map_South Region` image, it is stated 
+"Projeccao Conica Conforme de Lambert" (Lambert Conic Conformal Projection).The Lambert Conic Conformal Projection 
+requires two parallels, a central meridian, and a Datum. The two parallels and the central meridian were obtained 
+from the scanned maps, and then through research the datum was discovered to be the Tete datum (discovered through this
+[column](https://www.ingentaconnect.com/contentone/asprs/pers/2017/00000083/00000005/art00005?crawler=true&mimetype=application/pdf)
+by Clifford J. Mugnier for ASPRS.org). A custom CRS was the made using that information.
 
-The new CRS was made to save having to datum transformations in the future. It was then decided that
-georeferencing would be done using the GAUL dataset for reference points because a graticule
-transformation was not possible.
+* The need to create a new custom CRS to use in QGIS for the georeferencing.
+The custom CRS using the Tete datum worked but, due to lack of information on the scanned images, was not accurate for 
+georeferencing. A new custom CRS based on the WGS84 datum was made using the proj4 string:
+
+   ```
+   +proj=lcc +lat_0=0 +lon_0=35.5 +lat_1=-14 +lat_2=-24 +x_0=0 +y_0=0 +datum=WGS84 +untis=m +no_defs
+   ```
+
+   The new CRS was made to save having to datum transformations in the future. It was then decided that
+   georeferencing would be done using the GAUL dataset for reference points because a graticule
+   transformation was not possible.
+
+**Note:** Sample QGIS projects will be provided for users to explore and analyze. The GAUL dataset, as this was the 
+suggested reference dataset. The dataset is available from [here](https://geonode.wfp.org/geoserver/wfs?format_options=charset%3AUTF-8&typename=geonode%3Aadm1_gaul_2015&outputFormat=SHAPE-ZIP&version=1.0.0&service=WFS&request=GetFeature)
+
 
 ### Georeferencing Mozambique Southern Region
 
 **Note:** Multiple iterations were required as the georeferencing was done against a reference dataset and could not
 be done by simply taking the corner graticules from the geotiff and projecting them into the custom CRS.
 
-#### Georeferencing Parameters tests
 
+#### Georefencing Parameters
 Georeferencing is an iterative process, and we needed to try different parameters to establish
 the most suitable ones to use.
 
 The methods below describe the different parameters that were tested with the raster images.
+
+#### Test Parameters
+This describes the parameters that were tested and we found to be not adequate to use for georeferencing.
 
 1. The first iteration of georeferencing the Southern Region of Mozambique was done using a linear transformation.
    The resulting image ended up being too different to the reference dataset spatially and so was immediately discarded.
@@ -70,19 +104,21 @@ The methods below describe the different parameters that were tested with the ra
    transformation
    was the significant warping of the polygons in the georeferenced image.
 
-8. For the last iteration, it was decided that the `Polynomial 1 transformation` warped the internal polygons of
-   Mozambique's Southern Region the least but more GCPs would help with the discrepancies between the reference dataset
-   and the tif. 55 GCPs, with residual pixels lower than 10, were used for the georeferencing and ended up with the best
-   result. The image below shows the georeferencer with the GCPs on the map and the GCP table showing the residuals
-   being below 10 (Ground Control Point 40 has the highest Residual Pixels at 8.976885).
-   ![Mozambique South Georeferencer](moz_img/MozSouth_GCPS_1.png)
+#### Best Candidate Parameters to Use
 
-   The image below shows the GCPs for Mozambique's Southern Region relative to the GAUL reference dataset.
-   ![Mozambique South GCPs on GAUL](moz_img/MozSouth_GCPS_2.png)
+For the last iteration, it was decided that the `Polynomial 1 transformation` warped the internal polygons of
+Mozambique's Southern Region the least but more GCPs would help with the discrepancies between the reference dataset
+and the tif. 55 GCPs, with residual pixels lower than 10, were used for the georeferencing and ended up with the best
+result. The image below shows the georeferencer with the GCPs on the map and the GCP table showing the residuals
+being below 10 (Ground Control Point 40 has the highest Residual Pixels at 8.976885).
+![Mozambique South Georeferencer](moz_img/MozSouth_GCPS_1.png)
 
-   The GCPs for Mozambique's Southern Region can be found [here](gcps/MozSouth_Poly1.points). There were still small
-   discrepancies between the georeferenced image and the reference dataset but to correct the discrepancies would warp
-   the polygons too much to be a viable image.
+The image below shows the GCPs for Mozambique's Southern Region relative to the GAUL reference dataset.
+![Mozambique South GCPs on GAUL](moz_img/MozSouth_GCPS_2.png)
+
+The GCPs for Mozambique's Southern Region can be found [here](gcps/MozSouth_Poly1.points). There were still small
+discrepancies between the georeferenced image and the reference dataset but to correct the discrepancies would warp
+the polygons too much to be a viable image.
 
 ### Georeferencing Mozambique Northern Region
 
