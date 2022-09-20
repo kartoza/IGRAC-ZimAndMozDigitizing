@@ -66,14 +66,14 @@ suggested reference dataset. The dataset is available from [here](https://geonod
 be done by simply taking the corner graticules from the geotiff and projecting them into the custom CRS.
 
 
-#### Georefencing Parameters
-Georeferencing is an iterative process, and we needed to try different parameters to establish
-the most suitable ones to use.
+#### Georefencing Parameters for Southern sheet
+Georeferencing is an iterative process, and we needed to try different parameters to establish the most suitable ones 
+to use.
 
 The methods below describe the different parameters that were tested with the raster images.
 
-#### Test Parameters
-This describes the parameters that were tested and we found to be not adequate to use for georeferencing.
+##### Test Parameters
+This describes the parameters that were tested, and we found to be not adequate to use for georeferencing.
 
 1. The first iteration of georeferencing the Southern Region of Mozambique was done using a linear transformation.
    The resulting image ended up being too different to the reference dataset spatially and so was immediately discarded.
@@ -104,7 +104,7 @@ This describes the parameters that were tested and we found to be not adequate t
    transformation
    was the significant warping of the polygons in the georeferenced image.
 
-#### Best Candidate Parameters to Use
+##### Best Candidate Parameters to Use
 
 For the last iteration, it was decided that the `Polynomial 1 transformation` warped the internal polygons of
 Mozambique's Southern Region the least but more GCPs would help with the discrepancies between the reference dataset
@@ -127,6 +127,11 @@ from georeferencing the Southern Region. The first 2 iterations were also done b
 georeferencing the Zouth Region of Mozambique so were done before it was decided that using the Thin Plate Spline
 transformation was providing false results.
 
+#### Georefencing Parameters for Northern sheet
+
+##### Test Parameters
+This describes the parameters that were tested, and we found to be not adequate to use for georeferencing.
+
 1. The first iteration was done using the `Thin Plate Spline transformation` where all the residual pixels were a false
    zero. 10 GCPs were used and resulted in good approximation that had some discrepancies between the georeferenced
    image
@@ -136,17 +141,19 @@ transformation was providing false results.
    added to the previous attempt's GCPs to total 201 GCPs. The Northern Region of Mozambique had many small islands and
    outlying points that had to be 'forced' into the correct place.
 
-3. The last iteration of georeferencing Mozambique's Northern Region was done using a `Polynomial 3 transformation`
-   with 149 GCPs. All the Residual Pixels for the GCPs were under 10. A polynomial 3 transformation was chosen as it
-   warped the image the least but had the fewest discrepancies between the reference dataset and the georeferenced
-   image. The image below shows the georeferencer with the GCPs on the map and the GCP table showing the residuals being
-   below 10 (Ground Control Point 124 has the highest Residual Pixels at 9.948533).
-   ![Mozambique North Georeferencer](moz_img/MozNorth_GCPS_1.png)
+##### Best Candidate Parameters to Use
 
-   The image below shows the GCPs for Mozambique's Northern Region relative to the GAUL reference dataset.
-   ![Mozambique North GCPs on GAUL](moz_img/MozNorth_GCPS_2.png)
+The last iteration of georeferencing Mozambique's Northern Region was done using a `Polynomial 3 transformation`
+with 149 GCPs. All the Residual Pixels for the GCPs were under 10. A polynomial 3 transformation was chosen as it
+warped the image the least but had the fewest discrepancies between the reference dataset and the georeferenced
+image. The image below shows the georeferencer with the GCPs on the map and the GCP table showing the residuals being
+below 10 (Ground Control Point 124 has the highest Residual Pixels at 9.948533).
+![Mozambique North Georeferencer](moz_img/MozNorth_GCPS_1.png)
 
-   The GCPs for Mozambique's Northern Region can be found [here](gcps/MozNorth_Poly3.points).
+The image below shows the GCPs for Mozambique's Northern Region relative to the GAUL reference dataset.
+![Mozambique North GCPs on GAUL](moz_img/MozNorth_GCPS_2.png)
+
+The GCPs for Mozambique's Northern Region can be found [here](gcps/MozNorth_Poly3.points).
 
 ### Checking Alignment of georeferenced Mozambique Images
 
@@ -177,13 +184,17 @@ discrepancy at map scale = 3.4 mm error on the original map?-->
 
 ## Zimbabwe
 
-1. Create a QGIS project for Zimbabwe and import the four Zimbabwe sheets into the project.
+There are four map sheets which are provided.
 
-2. Attempt to find any info about Zim projection, datum, etc. through research. Finding the memoir for the sheets would
+### Analysis of map sheets before georeferencing
+
+After loading the raster images into QGIS and doing some investigation. The following conclusion were established:
+
+* Attempt to find any info about Zim projection, datum, etc. through research. Finding the memoir for the sheets would
    be the ideal situation. The maps being from 1986 mean that their projection system was most likely based on the Arc
    1950 datum (which is based on the Clarke 1880 ellipsoid).
 
-3. Research did not yield the projection used for creating the sheets. The projection is required to make custom
+* Research did not yield the projection used for creating the sheets. The projection is required to make custom
    projected CRS for better georeferencing. The closest option found during research was a report from UNESCO from
    1995 (Hydrogeological Maps A Guide and Standard Legend. Vol. 17., by Struckmeier, Wilhelm F, and Jean Margat)
    referencing the Zimbabwe Hydrogeological maps stating that "preferably UTM grid" was used for map locations. Using
@@ -196,7 +207,13 @@ discrepancy at map scale = 3.4 mm error on the original map?-->
    The Central Meridian (lon_0) and the Latitude of Origin (lat_0) were taken from the Zimbabwe sheets and the **+a**
    and **+rf** values are for the Arc 1950 datum.
 
-### Georeferencing Zimbabwe Sheets 1 through 4
+#### Georefencing Parameters for the four sheets
+Georeferencing is an iterative process, and we needed to try different parameters to establish the most suitable ones 
+to use.
+
+The methods below describe the different parameters that were tested with the raster images.
+
+##### Test Parameters
 
 1. The first iteration of georeferencing Zimbabwe Sheet 1 was done using a `Thin Plate Spline transformation` using 11
    GCPS. There were multiple discrepancies between the georeferenced image and the reference image.
@@ -207,9 +224,11 @@ discrepancy at map scale = 3.4 mm error on the original map?-->
 3. The first iteration of georeferencing Zimbabwe Sheet 3 was done using a `Thin Plate Spline transformation` using 8
    GCPS. There were multiple discrepancies between the georeferenced image and the reference image.
 
-4. The first iteration of georeferencing Zimbabwe Sheet 4 was done using a `Thin Plate Spline transformation` using 12
-   GCPS. There were multiple discrepancies between the georeferenced image and the reference image. It was the best
-   result of the initial georeferencing attempts so will be refined first and then used as a basis for the other images.
+##### Best Candidate Parameters to Use
+
+The first iteration of georeferencing Zimbabwe Sheet 4 was done using a `Thin Plate Spline transformation` using 12
+GCPS. There were multiple discrepancies between the georeferenced image and the reference image. It was the best
+result of the initial georeferencing attempts so will be refined first and then used as a basis for the other images.
 
 ### Refining Zimbabwe Sheet 4
 
