@@ -1,6 +1,6 @@
 # IGRAC Website
 
-Handbook and Technical Docs Repository for the IGRAC Hydrogeological Digitizing Project for Mozambique and Zimbabwe. Here is where we highlight the procedures, principles, and processes related to the work we carried out. Please review this content at [https://kartoza.github.io/IGRAC-ZimAndMozDigitizing](https://kartoza.github.io/IGRAC-ZimAndMozDigitizing) for more information.
+Handbook and Technical Docs Repository for the IGRAC Hydrogeological Digitizing Project for Mozambique and Zimbabwe. The document highlights the procedures, principles, and processes related to the IGRAC Hydrogeological Digitizing Project. Please review this content at [https://kartoza.github.io/IGRAC-ZimAndMozDigitizing](https://kartoza.github.io/IGRAC-ZimAndMozDigitizing) for more information.
 
 ## Building the Handbook as a PDF
 
