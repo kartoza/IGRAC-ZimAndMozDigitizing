@@ -21,7 +21,7 @@ plugins:
       back_cover: true
       cover_title: Hydrogeology Digitizing Handbook
       cover_subtitle: For Zimbabwe and Mozambique
-      cover_logo: ../resources/img/logo/logo.svg
+      cover_logo: ../assets/igrac_logo.svg
       # Print css is defined in templates/styles.scss
       #custom_template_path: TEMPLATES PATH
       #
