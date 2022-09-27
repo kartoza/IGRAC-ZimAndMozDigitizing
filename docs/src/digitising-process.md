@@ -94,10 +94,10 @@ would help to correct the discrepancies between the reference dataset and the ti
 than 10, were used for the georeferencing and ended up with the best result. The image below shows the georeferencer
 with the GCPs on the map and the GCP table showing the residuals being below 10 (Ground Control Point 40 has the
 highest Residual Pixels at 8.976885).
-![Mozambique South Georeferencer](./images/moz_img/MozSouth_GCPS_1.png)
+![Mozambique South Georeferencer](images/moz_img/MozSouth_GCPS_1.png)
 
 The image below shows the GCPs for Mozambique's Southern Region relative to the GAUL reference dataset.
-![Mozambique South GCPs on GAUL](./images/moz_img/MozSouth_GCPS_2.png)
+![Mozambique South GCPs on GAUL](images/moz_img/MozSouth_GCPS_2.png)
 
 The GCPs for Mozambique's Southern Region can be found [here](gcps/MozSouth_Poly1.points). There were still small discrepancies between the
 georeferenced image and the reference dataset but to correct the discrepancies would warp the polygons too much to be
@@ -128,10 +128,10 @@ gave the best results. All the Residual Pixels for the GCPs were under 10. A pol
 warped the image the least but had the fewest discrepancies between the reference dataset and the georeferenced
 image. The image below shows the georeferencer with the GCPs on the map and the GCP table showing the residuals
 being below 10 (Ground Control Point 124 has the highest Residual Pixels at 9.948533).
-![Mozambique North Georeferencer](./images/moz_img/MozNorth_GCPS_1.png)
+![Mozambique North Georeferencer](images/moz_img/MozNorth_GCPS_1.png)
 
 The image below shows the GCPs for Mozambique's Northern Region relative to the GAUL reference dataset.
-![Mozambique North GCPs on GAUL](./images/moz_img/MozNorth_GCPS_2.png)
+![Mozambique North GCPs on GAUL](images/moz_img/MozNorth_GCPS_2.png)
 
 The GCPs for Mozambique's Northern Region can be found [here](gcps/MozNorth_Poly3.points).
 
@@ -140,24 +140,24 @@ The GCPs for Mozambique's Northern Region can be found [here](gcps/MozNorth_Poly
 Due to the nature of georeferencing scanned maps, there are slight discrepancies where the sheets meet each other but
 they are minimal.
 
-![Mozambique join between sheets](./images/moz_img/maps_join.png)
+![Mozambique join between sheets](images/moz_img/maps_join.png)
 
 The main discrepancy for Mozambique's Southern Region between the southernmost border of the **Mozambique
 Hydrogeological Map_South Region** tif and the GAUL reference dataset.
 <!-- At the original scale of the map (1:1 000 000) the discrepancies are within an acceptable error range. 1942.229m 
 discrepancy at map scale = 1.9 mm error on the original map-->
 
-![Mozambique South Discrepancies Image](./images/moz_img/MozSouth_Discrepancy.png)
+![Mozambique South Discrepancies Image](images/moz_img/MozSouth_Discrepancy.png)
 
 There are multiple discrepancies between the Northern Border of **Mozambique Hydrogeological Map_North Region** tif
 and the GAUL reference dataset. There are discrepancies where the administration boundary on the map and the GAUL
 boundary differ, and where the Ruvuma (formerly Rovuma) River's path on the **Mozambique Hydrogeological
 Map_North Region** tif differs from its path on the GAUL dataset( the path on the GAUL dataset is ratified by GLAD
 Landsat imagery).
-![Mozambique North Discrepancies 1](./images/moz_img/MozNorth_Discrepancies.png)
+![Mozambique North Discrepancies 1](images/moz_img/MozNorth_Discrepancies.png)
 
 A closer look at one of the worse discrepancies:
-![Mozambique North Discrepancies 2](./images/moz_img/MozNorth_Discrepancies_2.png)
+![Mozambique North Discrepancies 2](images/moz_img/MozNorth_Discrepancies_2.png)
 
 <!-- At the original scale of the map (1:1 000 000) the discrepancies are within an acceptable error range. 3465.166m
 discrepancy at map scale = 3.4 mm error on the original map-->
@@ -217,11 +217,11 @@ decided that Sheet 4 should be refined first and then used as a reference basis 
 |Third| **Polynomial 3 transformation**      |After a discussion, it was decided that the Residual Pixels from a `Thin plate Spline transformation` being zero was a false reading and so a `Polynomial 3 transformation` was chosen as it gave the best results. 42 GCPs were used with all the Residual Pixels being less than 10 (Point 16 was the GCP with the highest Residual Pixel value of 9.592993). The images below show the results of this transformation:|
 
 The image below shows the georeferencer and part of the associated GCP table:
-![Zim Sheet 4 Georeferencer](./images/zim_img/zim_sheet4_poly3.png)
+![Zim Sheet 4 Georeferencer](images/zim_img/zim_sheet4_poly3.png)
 
 The image below shows the GCPs for Zimbabwe Sheet 4 relative to the GAUL reference dataset over the GLAD Landsat
 dataset.
-![Zim Sheet 4 GCPs on GAUL](./images/zim_img/zim_sheet4_gcps.png)
+![Zim Sheet 4 GCPs on GAUL](images/zim_img/zim_sheet4_gcps.png)
 
 The GCPs for the `Polynomial 3 transformation` can be found [here](gcps/zimbabwe_sheet4_Poly3.points).
 
@@ -237,15 +237,15 @@ real world.
 |Second| **Polynomial 1 transformation**      | This transformation was chosen as it gave the best result out of the transformation types. Done using 11 GCPs with all the Residual Pixels for the GCPs were lower than 10. Despite all of Sheet 3's GCPs having lower Residual Pixel values than Sheet 4's GCPs, it had greater discrepancies along its western boundary. The images below show the results of this transformation:|
 
 The Image below shows the discrepancies along Sheet 3's western boundary
-![Zim Sheet 3 western boundary discrepancy](./images/zim_img/zim_sheet3_discrepancy.png)
+![Zim Sheet 3 western boundary discrepancy](images/zim_img/zim_sheet3_discrepancy.png)
 
 The image below shows the georeferencer and part of the associated GCP table (Point 7 was the GCP with the highest
 Residual Pixel value of 1.211239):
-![Zim Sheet 3 Georeferencer](./images/zim_img/zim_sheet3_poly1.png)
+![Zim Sheet 3 Georeferencer](images/zim_img/zim_sheet3_poly1.png)
 
 The image below shows the GCPs for Zimbabwe Sheet 4 relative to the GAUL reference dataset over the GLAD Landsat
 dataset.
-![Zim sheet 3 GCPs on GAUL](./images/zim_img/zim_sheet3_gcps.png)
+![Zim sheet 3 GCPs on GAUL](images/zim_img/zim_sheet3_gcps.png)
 
 The GCPs for the `Polynomial 1 transformation` can be found [here](gcps/zimbabwe_sheet3_Poly1.points).
 
@@ -261,11 +261,11 @@ sheet and the roads that are represented on the scanned map do not intersect wit
 
 The image below shows the georeferencer and part of the associated GCP table (Point 18 was the GCP with the highest
 Residual Pixel value of 9.794608):
-![Zim Sheet 2 Georeferencer](./images/zim_img/zim_sheet2_poly3.png)
+![Zim Sheet 2 Georeferencer](images/zim_img/zim_sheet2_poly3.png)
 
 The image below shows the GCPs for Zimbabwe Sheet 2 relative to the GAUL reference dataset over the GLAD
 Landsat dataset.
-![Zim sheet 2 GCPs on GAUL](./images/zim_img/zim_sheet2_gcps.png)
+![Zim sheet 2 GCPs on GAUL](images/zim_img/zim_sheet2_gcps.png)
 
 The GCPs for the `Polynomial 3 transformation` can be found [here](gcps/zimbabwe_sheet2_Poly3.points).
 
@@ -282,11 +282,11 @@ real world. The Great Dyke was used where it was clear that a GCP could be place
 
 All the Residual Pixels for the GCPs were lower than 10 (Point 17 was the GCP with the highest Residual Pixel value of
 7.111510).
-![Zim Sheet 1 Georeferencer](./images/zim_img/zim_sheet1_poly1.png)
+![Zim Sheet 1 Georeferencer](images/zim_img/zim_sheet1_poly1.png)
 
 The image below shows the GCPs for Zimbabwe Sheet 1 relative to the GAUL reference dataset over the GLAD
 Landsat dataset.
-![Zim Sheet 1 GCPs on GAUL](./images/zim_img/zim_sheet1_gcps.png)
+![Zim Sheet 1 GCPs on GAUL](images/zim_img/zim_sheet1_gcps.png)
 
 The GCPs for the `Polynomial 1 transformation` can be found [here](gcps/zimbabwe_sheet1_Poly1.points).
 
@@ -302,7 +302,7 @@ central area of Zimbabwe. The discrepancies and their respective measurements ar
 coloured lines in the image below. The discrepancies between sheets edges get smaller closer to the country boundary
 of Zimbabwe due to there being multiple GCPs along the administration boundary.
 <!-- The largest discrepancy is 2.52 km which would be an error of 2.5 mm on the original map-->
-![Zimbabwe Discrepancies Image](./images/zim_img/zim_sheets_intersection.png)
+![Zimbabwe Discrepancies Image](images/zim_img/zim_sheets_intersection.png)
 
 ### Refining Zimbabwe Georeferencing as a whole
 
@@ -312,7 +312,7 @@ had major discrepancies in the central region of Zimbabwe.
 
 The solution to this issue was to stitch the images together in an external software (Inkscape) and then georeference
 this stitched image. The stitched together image and its associated GCPs looked like this:
-![Zim Stitched and GCPs](./images/zim_img/zim_stitched_gcps.png)
+![Zim Stitched and GCPs](images/zim_img/zim_stitched_gcps.png)
 
 This image gave the best result of the georeferencing so was used for the digitization process.
 
@@ -373,10 +373,10 @@ QGIS provides snapping tools which allow digitized vector data to follow the top
 more timely manner.
 
 General QGIS snapping configuration:
-![snapping_config](./images/snapping_config.png)
+![snapping_config](images/snapping_config.png)
 
 Project snapping options:
-![generic snapping options](./images/generic_snapping.png)
+![generic snapping options](images/generic_snapping.png)
 
 The snapping settings were the same for digitizing both Mozambique and Zimbabwe. They were set out as in the image
 below:
@@ -402,15 +402,15 @@ The digitizing of the various features was done using a mixture of `Digitize wit
 
 This was used to make sure the data conformed to the topology rules. Various rules were tested based on the data type.
 
-![topology_checker](./images/topology_checker.png)
+![topology_checker](images/topology_checker.png)
 
 Different test are applicable for dataset type. The tool allows the following rules to be tested:
-![topology_settings](./images/topology_checker_settings.png)
+![topology_settings](images/topology_checker_settings.png)
 
 #### Geometry checker Plugin
 This tool also provides a way to check if the topological relationship between features exists and are conformant.
 
-![image_settings_geo](./images/geom_checker_settings.png)
+![image_settings_geo](images/geom_checker_settings.png)
 
 ### Duplicate checks and Geometry validity
 
@@ -424,9 +424,9 @@ are captured at the same location. The default setting in QGIS is to run algorit
 specification ( valid geometry).
 
 1. In this case we had to run the algorithm `Fix geometries`
-![Fix Geometries](./images/fix-geometries.png)
+![Fix Geometries](images/fix-geometries.png)
 2. This was followed by running the algorithm `delete duplicate geometries` from the vector layers.
-![img.png](./images/delete-geometries.png)
+![img.png](images/delete-geometries.png)
 
 #### Check Duplicates by Symbology
 
@@ -453,18 +453,56 @@ This check was done in the geopackage database to check if all the values are st
 Since in the QGIS projects the values are linked by lookup tables.
 
 **Lookup table in QGIS**
-![Lookup values](./images/lookup-features.png)
+![Lookup values](images/lookup-features.png)
 
 **Actual values in the geopackage**
-![db features](./images/db-features.png)
+![db features](images/db-features.png)
 
 ### Zimbabwe vector features
 
 The image below depicts the vectorised features.
-![Zimbabwe Vector Features](./images/zim-digitized.png)
+![Zimbabwe Vector Features](images/zim-digitized.png)
 
 #### Geology Lines
 
 A total of 9259 features were captured.
 
 ## QA for cartography
+
+### Mozambique
+
+The original map sheets contain legends which defined how individual features should be symbolized.
+
+**Mozambique legends**
+![moz_legend1](images/moz_legend_1.png)
+
+![moz_legend2](images/moz_legend_2.png)
+
+![moz_legend_3](images/moz_legend_3.png)
+
+QGIS offers advanced cartography options but matching the legend to the symbology in QGIS involves considerable
+amount of time and effort. The symbology rules match the legend on the features that where digitized but some issues
+occur that will still need to be attended to:
+
+* There is no 1-1 match from translating legend to symbology because the original dataset might have been made using
+a different GIS software and further refined in software like photoshop.
+* Where SVG symbols where use to label some features, they need to be scaled properly so that they can be visualized
+at the correct scale.
+![label_svg](images/moz_label_svg.png)
+* Scale of the map. Since the original map is a small scale map, all features that are visible on the map  visually look
+nice or matching the original legend at some predefined scales in QGIS.
+
+**Mozambique Digitized layers**
+![moz_digitized_look](images/moz_digitized_look.png)
+
+The QGIS project that will be shared are all stored in the geopackage and their corresponding style files. SVG symbols
+are also embedded in the projects and can be extracted to file.
+
+**Note:** If the symbology need to be used in GeoNode (SLD), additional work should be done to tweak the exported SLD.
+
+### Zimbabwe
+The Zimbabwe legend does not contain a lot of symbols that need to be matched.
+
+**Hydrological features**
+![zim_hydro_symbology](images/zim_hydro.png)
+
