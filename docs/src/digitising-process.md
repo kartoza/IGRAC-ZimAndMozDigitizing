@@ -37,26 +37,25 @@ The georeferencing process will likely be similar for these two sheets.
 After loading the raster images (`Mozambique Hydrological Map_North Region` and `Mozambique Hydrological Map_South Region` tifs)
 into QGIS and doing some investigation. The following conclusion were established:
 
-* The Coordinate Reference System (CRS) for the Mozambique raster images (.tif) was unknown. In the  `Legenda (Legend)` on
-the `Mozambique Hydrological Map_South Region` image, it is stated "Projeccao Conica Conforme de Lambert"
-(Lambert Conic Conformal Projection). The Lambert Conic Conformal Projection requires two parallels, a central
-meridian, and a Datum. The two parallels and the central meridian were obtained from the scanned maps, and then
-through research the datum was discovered to be the Tete datum (discovered through this [column](https://www.ingentaconnect.com/contentone/asprs/pers/2017/00000083/00000005/art00005?crawler=true&mimetype=application/pdf) by Clifford J.
-Mugnier for ASPRS.org). A custom CRS was the made using that information.
+* The Coordinate Reference System (CRS) for the Mozambique raster images (.tif) was unknown. In the  `Legenda`
+  `(Legend)` on the `Mozambique Hydrological Map_South Region` image, it is stated "Projeccao Conica Conforme
+  de Lambert" (Lambert Conic Conformal Projection). The Lambert Conic Conformal Projection requires two parallels,
+  a central meridian, and a Datum. The two parallels and the central meridian were obtained from the scanned maps,
+  and then through research the datum was discovered to be the Tete datum (discovered through this [column](https://www.ingentaconnect.com/contentone/asprs/pers/2017/00000083/00000005/art00005?crawler=true&mimetype=application/pdf) by
+  Clifford J. Mugnier for ASPRS.org). A custom CRS was the made using that information.
 
 * There is a need to create a new custom CRS to use in QGIS for the georeferencing.
-The custom CRS using the Tete datum worked but, due to lack of information on the scanned images, was not accurate for
-georeferencing. A new custom CRS based on the WGS84 datum was made using the proj4 string:
+The custom CRS using the Tete datum worked but, due to lack of information on the scanned images, was not
+accurate for georeferencing. A new custom CRS based on the WGS84 datum was made using the proj4 string:
 
     ```py
     +proj=lcc +lat_0=0 +lon_0=35.5 +lat_1=-14 +lat_2=-24 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs
     ```
 
-   The new CRS was made to save having to datum transformations in the future. It was then decided that
-   georeferencing would be done using the GAUL dataset for reference points because a graticule
-   transformation was not possible.
+  The new CRS was made to save having to perform datum transformations in the future. It was then decided that
+  georeferencing would be done using the GAUL dataset for reference points because a graticule transformation was
+  not possible.
 
-    
 ### Georeferencing Mozambique Southern Region
 
 Multiple iterations were required as the georeferencing was done against a reference dataset and could not
@@ -89,26 +88,26 @@ This describes the parameters that were tested, and we found to be not adequate 
 ##### Final Parameters Selected
 
 After testing other types of transformations it was decided that using the `Polynomial 1 transformation` gave the best
-result. This transformation type warped the internal polygons of Mozambique's Southern Region the least but more GCPs
-would help to correct the discrepancies between the reference dataset and the tif. 55 GCPs, with residual pixels lower
-than 10, were used for the georeferencing and ended up with the best result. The image below shows the georeferencer
-with the GCPs on the map and the GCP table showing the residuals being below 10 (Ground Control Point 40 has the
-highest Residual Pixels at 8.976885).
+result. This transformation type warped the internal polygons of Mozambique's Southern Region the least but more
+GCPs would help to correct the discrepancies between the reference dataset and the tif. 55 GCPs, with residual pixels
+lower than 10, were used for the georeferencing and ended up with the best result. The image below shows the
+georeferencer with the GCPs on the map and the GCP table showing the residuals being below 10 (Ground Control
+Point 40 has the highest Residual Pixels at 8.976885).
 ![Mozambique South Georeferencer](images/moz_img/MozSouth_GCPS_1.png)
 
 The image below shows the GCPs for Mozambique's Southern Region relative to the GAUL reference dataset.
 ![Mozambique South GCPs on GAUL](images/moz_img/MozSouth_GCPS_2.png)
 
 The GCPs for Mozambique's Southern Region can be found [here](gcps/MozSouth_Poly1.points). There were still small discrepancies between the
-georeferenced image and the reference dataset but to correct the discrepancies would warp the polygons too much to be
-a viable image.
+georeferenced image and the reference dataset but to correct the discrepancies would warp the polygons too much to
+be a viable image.
 
 ### Georeferencing Mozambique Northern Region
 
 **Note:** Fewer iterations were required for the Northern Region of Mozambique as it was done using knowledge gained
-from georeferencing the Southern Region. The first 2 iterations were also done before the final iteration of georeferencing
-the South Region of Mozambique so were done before it was decided that using the Thin Plate Spline transformation was
-providing false results.
+from georeferencing the Southern Region. The first 2 iterations were also done before the final iteration of
+georeferencing the South Region of Mozambique so were done before it was decided that using the Thin Plate Spline
+transformation was providing false results.
 
 #### Georeferencing Parameters for Northern sheet
 
@@ -124,8 +123,8 @@ This describes the parameters that were tested, and we found to be not adequate 
 ##### Final Parameters Selected
 
 After testing other types of transformations it was decided that using a `Polynomial 3 transformation` with 149 GCP
-gave the best results. All the Residual Pixels for the GCPs were under 10. A polynomial 3 transformation was chosen as it
-warped the image the least but had the fewest discrepancies between the reference dataset and the georeferenced
+gave the best results. All the Residual Pixels for the GCPs were under 10. A polynomial 3 transformation was chosen as
+it warped the image the least but had the fewest discrepancies between the reference dataset and the georeferenced
 image. The image below shows the georeferencer with the GCPs on the map and the GCP table showing the residuals
 being below 10 (Ground Control Point 124 has the highest Residual Pixels at 9.948533).
 ![Mozambique North Georeferencer](images/moz_img/MozNorth_GCPS_1.png)
@@ -149,9 +148,9 @@ discrepancy at map scale = 1.9 mm error on the original map-->
 
 ![Mozambique South Discrepancies Image](images/moz_img/MozSouth_Discrepancy.png)
 
-There are multiple discrepancies between the Northern Border of **Mozambique Hydrogeological Map_North Region** tif
-and the GAUL reference dataset. There are discrepancies where the administration boundary on the map and the GAUL
-boundary differ, and where the Ruvuma (formerly Rovuma) River's path on the **Mozambique Hydrogeological
+There are multiple discrepancies between the Northern Border of **Mozambique Hydrogeological Map_North Region**
+tif and the GAUL reference dataset. There are discrepancies where the administration boundary on the map and the
+GAUL boundary differ, and where the Ruvuma (formerly Rovuma) River's path on the **Mozambique Hydrogeological
 Map_North Region** tif differs from its path on the GAUL dataset( the path on the GAUL dataset is ratified by GLAD
 Landsat imagery).
 ![Mozambique North Discrepancies 1](images/moz_img/MozNorth_Discrepancies.png)
@@ -170,22 +169,23 @@ Four map sheets were provided to be georeferenced.
 
 After loading the raster images into QGIS and doing some investigation. The following conclusions were established:
 
-* Attempt to find any information about the Zimbabwe projection, datum, etc. through research. Finding the memoire for
-  the sheets would be the ideal situation. The maps being from 1986 mean that their projection system was most likely
-  based on the Arc 1950 datum (which is based on the Clarke 1880 ellipsoid).
+* Attempt to find any information about the Zimbabwe projection, datum, etc. through research. Finding the memoire
+  for the sheets would be the ideal situation. The maps being from 1986 mean that their projection system was most
+  likely based on the Arc 1950 datum (which is based on the Clarke 1880 ellipsoid).
 
 * Research did not yield the projection used for creating the sheets. The projection is required to make custom
-   projected CRS for better georeferencing. The closest option found during research was a report from UNESCO from
-   1995 (Hydrogeological Maps A Guide and Standard Legend. Vol. 17., by Struckmeier, Wilhelm F, and Jean Margat)
-   referencing the Zimbabwe Hydrogeological maps stating that "preferably UTM grid" was used for map locations.
-   Using this information, a custom tmerc (Transverse mercator) projection system was made using the proj string:
+  projected CRS for better georeferencing. The closest option found during research was a report from UNESCO
+  from 1995 (Hydrogeological Maps A Guide and Standard Legend. Vol. 17., by Struckmeier, Wilhelm F, and Jean
+  Margat) referencing the Zimbabwe Hydrogeological maps stating that "preferably UTM grid" was used for map
+  locations. Using this information, a custom tmerc (Transverse mercator) projection system was made using the proj
+  string:
 
     ```py
     Custom CRS: +proj=tmerc +lat_0=-19 +lon_0=30 +k=1 +x_0=0 +y_0=0 +a=6378249.145 +rf=293.4663077 +units=m +no_defs
     ```
 
-   The Central Meridian (lon_0) and the Latitude of Origin (lat_0) were taken from the four Zimbabwe sheets and the **+a**
-   and **+rf** values are for the Arc 1950 datum.
+  The Central Meridian (lon_0) and the Latitude of Origin (lat_0) were taken from the four Zimbabwe sheets and the
+  **+a** and **+rf** values are for the Arc 1950 datum.
 
 #### Georeferencing Parameters for the four sheets
 
@@ -205,8 +205,8 @@ The methods below describe the different parameters that were tested with the ra
 
 ##### Final Parameters Selected
 
-The first iteration of georeferencing Zimbabwe Sheet 4 was the best result of the initial georeferencing attempts. So it was
-decided that Sheet 4 should be refined first and then used as a reference basis for the other images.
+The first iteration of georeferencing Zimbabwe Sheet 4 was the best result of the initial georeferencing attempts. So it
+was decided that Sheet 4 should be refined first and then used as a reference basis for the other images.
 
 ### Refining Zimbabwe Sheet 4
 
@@ -219,8 +219,8 @@ decided that Sheet 4 should be refined first and then used as a reference basis 
 The image below shows the georeferencer and part of the associated GCP table:
 ![Zim Sheet 4 Georeferencer](images/zim_img/zim_sheet4_poly3.png)
 
-The image below shows the GCPs for Zimbabwe Sheet 4 relative to the GAUL reference dataset over the GLAD Landsat
-dataset.
+The image below shows the GCPs for Zimbabwe Sheet 4 relative to the GAUL reference dataset over the GLAD
+Landsat dataset.
 ![Zim Sheet 4 GCPs on GAUL](images/zim_img/zim_sheet4_gcps.png)
 
 The GCPs for the `Polynomial 3 transformation` can be found [here](gcps/zimbabwe_sheet4_Poly3.points).
@@ -243,8 +243,8 @@ The image below shows the georeferencer and part of the associated GCP table (Po
 Residual Pixel value of 1.211239):
 ![Zim Sheet 3 Georeferencer](images/zim_img/zim_sheet3_poly1.png)
 
-The image below shows the GCPs for Zimbabwe Sheet 4 relative to the GAUL reference dataset over the GLAD Landsat
-dataset.
+The image below shows the GCPs for Zimbabwe Sheet 4 relative to the GAUL reference dataset over the GLAD
+Landsat dataset.
 ![Zim sheet 3 GCPs on GAUL](images/zim_img/zim_sheet3_gcps.png)
 
 The GCPs for the `Polynomial 1 transformation` can be found [here](gcps/zimbabwe_sheet3_Poly1.points).
@@ -259,8 +259,8 @@ sheet and the roads that are represented on the scanned map do not intersect wit
 |First| **Thin Plate Spline transformation** |This was done using 53 GCPs, all with a false zero value for their Residual Pixels. There were significant discrepancies between the GAUL reference dataset and georeferenced sheet's boundaries.|
 |Second| **Polynomial 3 transformation**      |This was done using 27 GCPs, where all the Residual Pixels for the GCPs were lower than 10. A `Polynomial 3 transformation` was used as it gave the best result out of the transformation types. The images below show the results of this transformation:|
 
-The image below shows the georeferencer and part of the associated GCP table (Point 18 was the GCP with the highest
-Residual Pixel value of 9.794608):
+The image below shows the georeferencer and part of the associated GCP table (Point 18 was the GCP with the
+highest Residual Pixel value of 9.794608):
 ![Zim Sheet 2 Georeferencer](images/zim_img/zim_sheet2_poly3.png)
 
 The image below shows the GCPs for Zimbabwe Sheet 2 relative to the GAUL reference dataset over the GLAD
@@ -408,6 +408,7 @@ Different test are applicable for dataset type. The tool allows the following ru
 ![topology_settings](images/topology_checker_settings.png)
 
 #### Geometry checker Plugin
+
 This tool also provides a way to check if the topological relationship between features exists and are conformant.
 
 ![image_settings_geo](images/geom_checker_settings.png)
@@ -424,9 +425,9 @@ are captured at the same location. The default setting in QGIS is to run algorit
 specification ( valid geometry).
 
 1. In this case we had to run the algorithm `Fix geometries`
-![Fix Geometries](images/fix-geometries.png)
+  ![Fix Geometries](images/fix-geometries.png)
 2. This was followed by running the algorithm `delete duplicate geometries` from the vector layers.
-![img.png](images/delete-geometries.png)
+  ![img.png](images/delete-geometries.png)
 
 #### Check Duplicates by Symbology
 
@@ -450,30 +451,33 @@ This was run against all the layers that were generated for the Zimbabwe and Moz
 ### Attribute table QA
 
 This check was done in the geopackage database to check if all the values are stored with the correct values.
-Since in the QGIS projects the values are linked by lookup tables.
+Since in the QGIS projects the values are linked by lookup tables. The lookup tables were not included the final project
+as they were for digitizing.
 
 **Lookup table in QGIS**
+This is an example from the Zimbabwe geopackage.
 ![Lookup values](images/lookup-features.png)
 
 **Actual values in the geopackage**
+This is an example from the Zimbabwe geopackage.
 ![db features](images/db-features.png)
 
-### Zimbabwe vector features
+**Zimbabwe vector features**
+The image below depicts the vectorised geology features from the above example.
+![Zimbabwe Vector Features](images/zim_img/zim_digitized_geology_features.png)
 
-The image below depicts the vectorised features.
-![Zimbabwe Vector Features](images/zim-digitized.png)
-
-#### Geology Lines
-
-A total of 9259 features were captured.
+**Zimbabwe Geology Lines**
+A total of 9259 geology features were captured.
 
 ## QA for cartography
 
-### Mozambique
+### Mozambique Cartography
 
-The original map sheets contain legends which defined how individual features should be symbolized.
+The original map sheets contain a legend and other images which define how individual features should be symbolized.
+Not all of the features on the original legend were digitized, only the features specified by the client were digitized.
 
-**Mozambique legends**
+#### Mozambique legend and additional styling cues
+
 ![moz_legend1](images/moz_legend_1.png)
 
 ![moz_legend2](images/moz_legend_2.png)
@@ -484,25 +488,141 @@ QGIS offers advanced cartography options but matching the legend to the symbolog
 amount of time and effort. The symbology rules match the legend on the features that where digitized but some issues
 occur that will still need to be attended to:
 
-* There is no 1-1 match from translating legend to symbology because the original dataset might have been made using
-a different GIS software and further refined in software like photoshop.
-* Where SVG symbols where use to label some features, they need to be scaled properly so that they can be visualized
-at the correct scale.
-![label_svg](images/moz_label_svg.png)
-* Scale of the map. Since the original map is a small scale map, all features that are visible on the map  visually look
-nice or matching the original legend at some predefined scales in QGIS.
+* There is no 1 to 1 match from translating legend to symbology because the original dataset might have been made
+using a different GIS software and further refined in software like photoshop. The features were digitized and then
+styled using 'Map units' so that the styling was consistent with the original map and didn't vary greatly through the
+various scales as the map was viewed.
+* Where SVG symbols were used to label some features, they needed to be scaled properly so that they could be
+visualized at the correct scale.
+![label_svg](images/moz_img/svg_labels.png)
+* Scale of the map: Since the original map is a small scale map, all features that are visible on the map visually look
+nice or closely match the original legend at some predefined scales in QGIS.
 
-**Mozambique Digitized layers**
-![moz_digitized_look](images/moz_digitized_look.png)
+#### Mozambique Digitized layers
+
+The image below depicts the vectorised features of Mozambique.
+![moz_digitized_look](images/moz_img/moz_digitized_features.png)
 
 The QGIS project that will be shared are all stored in the geopackage and their corresponding style files. SVG symbols
 are also embedded in the projects and can be extracted to file.
 
-**Note:** If the symbology need to be used in GeoNode (SLD), additional work should be done to tweak the exported SLD.
+>**Note:** If the symbology needs to be used in GeoNode (SLD), additional work should be done to tweak the exported SLD.
 
-### Zimbabwe
-The Zimbabwe legend does not contain a lot of symbols that need to be matched.
+##### Number of features digitized
 
-**Hydrological features**
-![zim_hydro_symbology](images/zim_hydro.png)
+The images below shows the break down of the 5377 digitized features in Mozambique:
+| Portuguese Features | English Features |
+|---------------------|------------------|
+| ![Mozambique Portuguese Features](images/moz_img/moz_portuguese_features.png) | ![Mozambique English Features](images/moz_img/moz_english_features.png) |
 
+> The layers were initially digitized in English and then duplicated and translated into Portuguese as this was faster
+> than the GIS specialist working in a language they did not speak.
+
+The features for Mozambique were split into lines, points, and polygons depending on how the features were
+represented on the original maps.
+
+##### Groundwater Occurrence Features
+
+All of the Groundwater Occurrence features for Mozambique are polygons and have been styled to be as close to
+the original map's styling as possible. On the original map, the groundwater occurrence features are listed first in the
+legend but in the project they are at the bottom of the layers list because otherwise none of the other layers would
+be visible.
+
+| Portuguese Features | English Features |
+|---------------------|------------------|
+| ![Groundwater Features Port](images/moz_img/groundwater_features_port.png) | ![Groundwater Features Eng](images/moz_img/groundwater_features_eng.png) |
+
+> The bottom feature with a zero [0] feature count is the `Else` rule to catch any features that have
+> been digitised but have not been assigned values in the attribute table.
+
+##### Geology Layers
+
+The Geology features were digitized as points or lines depending on how they were represented on the original map.
+There weren't any features that had any additional information to be digitized.
+  
+| Portuguese Features | English Features |
+|---------------------|------------------|
+| ![Geo Features Port](images/moz_img/geo_features_port.png) | ![Geo Features Eng](images/moz_img/geo_features_eng.png) |
+
+> The bottom feature of each type with a zero [0] feature count is the `Else` rule to catch any features that have
+> been digitised but have not been assigned values in the attribute table.
+
+##### Underground Water Features
+
+The Underground Water features were digitized as points, lines, or polygons depending on how they were represented
+on the original maps. Lines with depth are styled to have the depth as a label along the lines.
+
+| Portuguese Features | English Features |
+|---------------------|------------------|
+| ![Underground water Features Port](images/moz_img/underground_water_features_port.png) | ![Underground water Features Eng](images/moz_img/underground_water_features_eng.png) |
+
+> The bottom feature of each type with a zero [0] feature count is the `Else` rule to catch any features that have
+> been digitised but have not been assigned values in the attribute table.
+
+The underground flow direction arrows (both types are shown in the image below) were digitized as lines and then
+styled into arrows rather than being digitized as points with angles of direction. This was done as the digitized lines gave
+a more accurate result than trying to digitize a central point for each arrow and then assigning direction values.
+![Underground water arrows](images/moz_img/underground_water_features_arrows.png)
+
+##### Water Quality Features
+
+The Water Quality features were digitized as points, lines, or polygons depending on how they were represented on the
+original maps. The lines are labelled with their residue values.
+| Portuguese Features | English Features |
+|---------------------|------------------|
+| ![Water quality Features Port](images/moz_img/water_quality_features_port.png) | ![Water quality Features Eng](images/moz_img/water_quality_features_eng.png) |
+
+> The bottom feature of each type with a zero [0] feature count is the `Else` rule to catch any features that have been
+> digitised but have not been assigned values in the attribute table.
+
+##### Intakes and Works Features
+
+All of the Intakes and Works features were digitized as points with styled labels. The holes with indication of the tapped
+layer (ks) and exploration flow are labelled with their flow in the layers list to avoid lengthy labels. The tapped layer is
+also part of the labelling on the digitized map.
+| Portuguese Features | English Features |
+|---------------------|------------------|
+| ![I and W Features Port](images/moz_img/i_and_w_features_port.png) | ![I and W Features Eng](images/moz_img/i_and_w_features_eng.png) |  
+
+> The bottom feature with a zero [0] feature count is the `Else` rule to catch any features that have
+> been digitised but have not been assigned values in the attribute table.
+
+### Zimbabwe Cartography
+
+#### Zimbabwe Legend
+
+The Zimbabwe legend does not contain a lot of symbols that need to be matched but the digitized symbols
+were made to match the original legend as closely as possible.
+
+![zim original legend](images/zim_img/zim_legend_original.png)
+
+#### Zimbabwe Digitized Layers
+
+The image below depicts the vectorized features of Zimbabwe.
+![Zimbabwe Vector Features](images/zim_img/zim_digitized_features.png)
+
+The features were digitized and then styled using 'Map units' so that the styling was consistent with the original map and
+didn't vary greatly through the various scales as the map was viewed.
+
+##### Number of features digitized
+
+The image below shows the break down of the 11576 digitized features in Zimbabwe:
+![Zim feature count](images/zim_img/zim_feature_count.png)
+
+##### The Hydrogeological Features
+
+The hydrogeological features were all styled polygons.
+  
+![Zim Hydro features](images/zim_img/zim_hydro_features.png)
+
+> The bottom feature with a zero [0] feature count is the `Else` rule to catch any features that have been digitised but
+> have not been assigned values in the attribute table.
+
+##### The Geological Features
+
+The geological features were split into lines and polygons depending on how the feature appeared on the original map.
+
+![Zim geology features](images/zim_img/zim_geology_features.png)
+
+> The bottom feature with a zero [0] feature count is the `Else` rule to catch any features that have
+> been digitised but have not been assigned values in the attribute table.
