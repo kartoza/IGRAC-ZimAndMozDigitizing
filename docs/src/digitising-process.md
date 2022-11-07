@@ -538,7 +538,7 @@ be visible.
 ##### Geology Layers
 
 The Geology features were digitized as points or lines depending on how they were represented on the original map.
-There weren't any features that had any additional information to be digitized.
+The stratigraphic columns needed to have special labels to represent the entire column.
   
 | Portuguese Features | English Features |
 |---------------------|------------------|
@@ -547,10 +547,20 @@ There weren't any features that had any additional information to be digitized.
 > The bottom feature of each type with a zero [0] feature count is the `Else` rule to catch any features that have
 > been digitised but have not been assigned values in the attribute table.
 
+The stratigraphic columns on the original map had linked symbols that could not accurately represented in an attribute
+table. The solution was to clip the symbols from the original map and then use them as svg labels offset from the points.
+The labels only appear between a scale of 1:800000 and 1:100000 because above 1:800000 the labels wouldn't appear
+due to overlap and below 1:100000 the labels take up too much screen space so are unreadable.
+
+| 1:800000 | 1:100000 |
+|----------|----------|
+|![SVGs big scale](images/moz_img/moz_svg_labels_bigscale.png)|![SVGs small scale](images/moz_img/moz_svg_labels_smallscale.png)
+
 ##### Underground Water Features
 
 The Underground Water features were digitized as points, lines, or polygons depending on how they were represented
-on the original maps. Lines with depth are styled to have the depth as a label along the lines.
+on the original maps. Lines with depth are styled to have the depth as a label along the lines and flow direction lines
+were digitized as lines and styled as arrows.
 
 | Portuguese Features | English Features |
 |---------------------|------------------|
@@ -558,6 +568,9 @@ on the original maps. Lines with depth are styled to have the depth as a label a
 
 > The bottom feature of each type with a zero [0] feature count is the `Else` rule to catch any features that have
 > been digitised but have not been assigned values in the attribute table.
+
+The depth values are labels that are parallel to the digitized lines.
+![isoline depth labels](images/moz_img/isoline_depths.png)
 
 The underground flow direction arrows (both types are shown in the image below) were digitized as lines and then
 styled into arrows rather than being digitized as points with angles of direction. This was done as the digitized lines gave
@@ -575,11 +588,14 @@ original maps. The lines are labelled with their residue values.
 > The bottom feature of each type with a zero [0] feature count is the `Else` rule to catch any features that have been
 > digitised but have not been assigned values in the attribute table.
 
+The residue values are labels that are parallel to the digitized lines.
+![residue lines](images/moz_img/residue_lines.png)
+
 ##### Intakes and Works Features
 
 All of the Intakes and Works features were digitized as points with styled labels. The holes with indication of the tapped
-layer (ks) and exploration flow are labelled with their flow in the layers list to avoid lengthy labels. The tapped layer is
-also part of the labelling on the digitized map.
+layer (ks) and exploration flow are labelled with their flow in the layers list to avoid lengthy labels. Where known on the
+original map, the tapped layer is also part of the labelling on the digitized map.
 | Portuguese Features | English Features |
 |---------------------|------------------|
 | ![I and W Features Port](images/moz_img/i_and_w_features_port.png) | ![I and W Features Eng](images/moz_img/i_and_w_features_eng.png) |  
@@ -587,12 +603,16 @@ also part of the labelling on the digitized map.
 > The bottom feature with a zero [0] feature count is the `Else` rule to catch any features that have
 > been digitised but have not been assigned values in the attribute table.
 
+Where known from the original map, the tapped layers are displayed to the left of the digitized features.
+![tapped layer](images/moz_img/tapped_layer.png)
+
 ### Zimbabwe Cartography
 
 #### Zimbabwe Legend
 
-The Zimbabwe legend does not contain a lot of symbols that need to be matched but the digitized symbols
-were made to match the original legend as closely as possible.
+The Zimbabwe legend does not contain multiple types of symbols that needed to be matched but the digitized symbols
+were made to match the original legend as closely as possible. There were however, over twice as many many features
+to digitize in Zimbabwe compared to Mozambique so it was a prolonged task.
 
 ![zim original legend](images/zim_img/zim_legend_original.png)
 
@@ -611,7 +631,7 @@ The image below shows the break down of the 11576 digitized features in Zimbabwe
 
 ##### The Hydrogeological Features
 
-The hydrogeological features were all styled polygons.
+The hydrogeological features were all styled polygons to mimic the original maps.
   
 ![Zim Hydro features](images/zim_img/zim_hydro_features.png)
 
