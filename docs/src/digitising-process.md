@@ -506,7 +506,7 @@ The image below depicts the vectorised features of Mozambique.
 The QGIS project that will be shared are all stored in the geopackage and their corresponding style files. SVG symbols
 are also embedded in the projects and can be extracted to file.
 
->**Note:** If the symbology needs to be used in GeoNode (SLD), additional work should be done to tweak the exported SLD.
+**Note:** If the symbology needs to be used in GeoNode (SLD), additional work should be done to tweak the exported SLD.
 
 ##### Number of features digitized
 
@@ -532,8 +532,9 @@ be visible.
 |---------------------|------------------|
 | ![Groundwater Features Port](images/moz_img/groundwater_features_port.png) | ![Groundwater Features Eng](images/moz_img/groundwater_features_eng.png) |
 
-> The bottom feature with a zero [0] feature count is the `Else` rule to catch any features that have
-> been digitised but have not been assigned values in the attribute table.
+> The bottom feature with a zero [0] feature count is the `Else` rule to catch any features that have been digitized but
+> have not been assigned values in the attribute table. The `Else` rule was used for digitizing and, at the client's
+> request, is not included in the final project.
 
 ##### Geology Layers
 
@@ -544,8 +545,9 @@ The stratigraphic columns needed to have special labels to represent the entire 
 |---------------------|------------------|
 | ![Geo Features Port](images/moz_img/geo_features_port.png) | ![Geo Features Eng](images/moz_img/geo_features_eng.png) |
 
-> The bottom feature of each type with a zero [0] feature count is the `Else` rule to catch any features that have
-> been digitised but have not been assigned values in the attribute table.
+> The bottom feature with a zero [0] feature count is the `Else` rule to catch any features that have been digitized but
+> have not been assigned values in the attribute table. The `Else` rule was used for digitizing and, at the client's
+> request, is not included in the final project.
 
 The stratigraphic columns on the original map had linked symbols that could not accurately represented in an attribute
 table. The solution was to clip the symbols from the original map and then use them as svg labels offset from the points.
@@ -566,8 +568,9 @@ were digitized as lines and styled as arrows.
 |---------------------|------------------|
 | ![Underground water Features Port](images/moz_img/underground_water_features_port.png) | ![Underground water Features Eng](images/moz_img/underground_water_features_eng.png) |
 
-> The bottom feature of each type with a zero [0] feature count is the `Else` rule to catch any features that have
-> been digitised but have not been assigned values in the attribute table.
+> The bottom feature with a zero [0] feature count is the `Else` rule to catch any features that have been digitized but
+> have not been assigned values in the attribute table. The `Else` rule was used for digitizing and, at the client's
+> request, is not included in the final project.
 
 The depth values are labels that are parallel to the digitized lines.
 ![isoline depth labels](images/moz_img/isoline_depths.png)
@@ -585,8 +588,9 @@ original maps. The lines are labelled with their residue values.
 |---------------------|------------------|
 | ![Water quality Features Port](images/moz_img/water_quality_features_port.png) | ![Water quality Features Eng](images/moz_img/water_quality_features_eng.png) |
 
-> The bottom feature of each type with a zero [0] feature count is the `Else` rule to catch any features that have been
-> digitised but have not been assigned values in the attribute table.
+> The bottom feature with a zero [0] feature count is the `Else` rule to catch any features that have been digitized but
+> have not been assigned values in the attribute table. The `Else` rule was used for digitizing and, at the client's
+> request, is not included in the final project.
 
 The residue values are labels that are parallel to the digitized lines.
 ![residue lines](images/moz_img/residue_lines.png)
@@ -600,8 +604,9 @@ original map, the tapped layer is also part of the labelling on the digitized ma
 |---------------------|------------------|
 | ![I and W Features Port](images/moz_img/i_and_w_features_port.png) | ![I and W Features Eng](images/moz_img/i_and_w_features_eng.png) |  
 
-> The bottom feature with a zero [0] feature count is the `Else` rule to catch any features that have
-> been digitised but have not been assigned values in the attribute table.
+> The bottom feature with a zero [0] feature count is the `Else` rule to catch any features that have been digitized but
+> have not been assigned values in the attribute table. The `Else` rule was used for digitizing and, at the client's
+> request, is not included in the final project.
 
 Where known from the original map, the tapped layers are displayed to the left of the digitized features.
 ![tapped layer](images/moz_img/tapped_layer.png)
@@ -635,8 +640,9 @@ The hydrogeological features were all styled polygons to mimic the original maps
   
 ![Zim Hydro features](images/zim_img/zim_hydro_features.png)
 
-> The bottom feature with a zero [0] feature count is the `Else` rule to catch any features that have been digitised but
-> have not been assigned values in the attribute table.
+> The bottom feature with a zero [0] feature count is the `Else` rule to catch any features that have been digitized but
+> have not been assigned values in the attribute table. The `Else` rule was used for digitizing and, at the client's
+> request, is not included in the final project.
 
 ##### The Geological Features
 
@@ -644,5 +650,6 @@ The geological features were split into lines and polygons depending on how the 
 
 ![Zim geology features](images/zim_img/zim_geology_features.png)
 
-> The bottom feature with a zero [0] feature count is the `Else` rule to catch any features that have
-> been digitised but have not been assigned values in the attribute table.
+> The bottom feature with a zero [0] feature count is the `Else` rule to catch any features that have been digitized but
+> have not been assigned values in the attribute table. The `Else` rule was used for digitizing and, at the client's
+> request, is not included in the final project.
