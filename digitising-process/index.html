@@ -1,0 +1,2165 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Work notes for digitising hydrogeological resources for Mozambique and Zimbabwe.">
+      
+      
+        <meta name="author" content="Kartoza and IGRAC">
+      
+      
+      <link rel="icon" href="../assets/logo.png">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.4.1">
+    
+    
+      
+        <title>Digitising Process - IGRAC Digitizing Project</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.69437709.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.cbb835fc.min.css">
+        
+      
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../css/print.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="grey">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#igrac-georeferencing-methodology" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="IGRAC Digitizing Project" class="md-header__button md-logo" aria-label="IGRAC Digitizing Project" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 22a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2h-6v7L9.5 7.5 7 9V2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            IGRAC Digitizing Project
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Digitising Process
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="grey"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="grey"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18V6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-2.69L23.31 12 20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/kartoza/IGRAC-ZimAndMozDigitizing" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    IGRAC Moz and Zim Hydrogeological Digitizing Project
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href=".." class="md-tabs__link">
+      Home
+    </a>
+  </li>
+
+      
+        
+  
+  
+    
+  
+
+
+  <li class="md-tabs__item">
+    <a href="./" class="md-tabs__link md-tabs__link--active">
+      Digitising Process
+    </a>
+  </li>
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="IGRAC Digitizing Project" class="md-nav__button md-logo" aria-label="IGRAC Digitizing Project" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 22a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2h-6v7L9.5 7.5 7 9V2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12Z"/></svg>
+
+    </a>
+    IGRAC Digitizing Project
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/kartoza/IGRAC-ZimAndMozDigitizing" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    IGRAC Moz and Zim Hydrogeological Digitizing Project
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Digitising Process
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Digitising Process
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#georeferencing-mapsheets" class="md-nav__link">
+    Georeferencing MapSheets
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mozambique" class="md-nav__link">
+    Mozambique
+  </a>
+  
+    <nav class="md-nav" aria-label="Mozambique">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#analysis-of-map-sheets-before-georeferencing" class="md-nav__link">
+    Analysis of map sheets before georeferencing
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#georeferencing-mozambique-southern-region" class="md-nav__link">
+    Georeferencing Mozambique Southern Region
+  </a>
+  
+    <nav class="md-nav" aria-label="Georeferencing Mozambique Southern Region">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#georeferencing-parameters-for-southern-sheet" class="md-nav__link">
+    Georeferencing Parameters for Southern sheet
+  </a>
+  
+    <nav class="md-nav" aria-label="Georeferencing Parameters for Southern sheet">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#test-parameters" class="md-nav__link">
+    Test Parameters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#final-parameters-selected" class="md-nav__link">
+    Final Parameters Selected
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#georeferencing-mozambique-northern-region" class="md-nav__link">
+    Georeferencing Mozambique Northern Region
+  </a>
+  
+    <nav class="md-nav" aria-label="Georeferencing Mozambique Northern Region">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#georeferencing-parameters-for-northern-sheet" class="md-nav__link">
+    Georeferencing Parameters for Northern sheet
+  </a>
+  
+    <nav class="md-nav" aria-label="Georeferencing Parameters for Northern sheet">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#test-parameters_1" class="md-nav__link">
+    Test Parameters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#final-parameters-selected_1" class="md-nav__link">
+    Final Parameters Selected
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#checking-alignment-of-georeferenced-mozambique-images" class="md-nav__link">
+    Checking Alignment of georeferenced Mozambique Images
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zimbabwe" class="md-nav__link">
+    Zimbabwe
+  </a>
+  
+    <nav class="md-nav" aria-label="Zimbabwe">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#analysis-of-map-sheets-before-georeferencing_1" class="md-nav__link">
+    Analysis of Map Sheets before Georeferencing
+  </a>
+  
+    <nav class="md-nav" aria-label="Analysis of Map Sheets before Georeferencing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#georeferencing-parameters-for-the-four-sheets" class="md-nav__link">
+    Georeferencing Parameters for the four sheets
+  </a>
+  
+    <nav class="md-nav" aria-label="Georeferencing Parameters for the four sheets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#test-parameters_2" class="md-nav__link">
+    Test Parameters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#final-parameters-selected_2" class="md-nav__link">
+    Final Parameters Selected
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#refining-zimbabwe-sheet-4" class="md-nav__link">
+    Refining Zimbabwe Sheet 4
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#refining-zimbabwe-sheet-3" class="md-nav__link">
+    Refining Zimbabwe Sheet 3
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#refining-zimbabwe-sheet-2" class="md-nav__link">
+    Refining Zimbabwe Sheet 2
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#refining-zimbabwe-sheet-1" class="md-nav__link">
+    Refining Zimbabwe Sheet 1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#checking-alignment-of-zimbabwe-sheets" class="md-nav__link">
+    Checking Alignment of Zimbabwe sheets
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#refining-zimbabwe-georeferencing-as-a-whole" class="md-nav__link">
+    Refining Zimbabwe Georeferencing as a whole
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#qa-quality-assurance" class="md-nav__link">
+    QA (Quality Assurance)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#georeferencing-qa" class="md-nav__link">
+    Georeferencing QA
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#qa-for-digitized-vector-layers" class="md-nav__link">
+    QA for digitized vector layers
+  </a>
+  
+    <nav class="md-nav" aria-label="QA for digitized vector layers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#topology-checker" class="md-nav__link">
+    Topology checker
+  </a>
+  
+    <nav class="md-nav" aria-label="Topology checker">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#snapping-options" class="md-nav__link">
+    Snapping options
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#digitizing-options" class="md-nav__link">
+    Digitizing options
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#topology-checker-plugin" class="md-nav__link">
+    Topology checker Plugin
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#geometry-checker-plugin" class="md-nav__link">
+    Geometry checker Plugin
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#duplicate-checks-and-geometry-validity" class="md-nav__link">
+    Duplicate checks and Geometry validity
+  </a>
+  
+    <nav class="md-nav" aria-label="Duplicate checks and Geometry validity">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#check-duplicates-by-symbology" class="md-nav__link">
+    Check Duplicates by Symbology
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#check-duplicates-by-sql" class="md-nav__link">
+    Check Duplicates by SQL
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#attribute-table-qa" class="md-nav__link">
+    Attribute table QA
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#qa-for-cartography" class="md-nav__link">
+    QA for cartography
+  </a>
+  
+    <nav class="md-nav" aria-label="QA for cartography">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mozambique-cartography" class="md-nav__link">
+    Mozambique Cartography
+  </a>
+  
+    <nav class="md-nav" aria-label="Mozambique Cartography">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mozambique-legend-and-additional-styling-cues" class="md-nav__link">
+    Mozambique legend and additional styling cues
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mozambique-digitized-layers" class="md-nav__link">
+    Mozambique Digitized layers
+  </a>
+  
+    <nav class="md-nav" aria-label="Mozambique Digitized layers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#number-of-features-digitized" class="md-nav__link">
+    Number of features digitized
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#groundwater-occurrence-features" class="md-nav__link">
+    Groundwater Occurrence Features
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#geology-layers" class="md-nav__link">
+    Geology Layers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#underground-water-features" class="md-nav__link">
+    Underground Water Features
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#water-quality-features" class="md-nav__link">
+    Water Quality Features
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#intakes-and-works-features" class="md-nav__link">
+    Intakes and Works Features
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#zimbabwe-cartography" class="md-nav__link">
+    Zimbabwe Cartography
+  </a>
+  
+    <nav class="md-nav" aria-label="Zimbabwe Cartography">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#zimbabwe-legend" class="md-nav__link">
+    Zimbabwe Legend
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#zimbabwe-digitized-layers" class="md-nav__link">
+    Zimbabwe Digitized Layers
+  </a>
+  
+    <nav class="md-nav" aria-label="Zimbabwe Digitized Layers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#number-of-features-digitized_1" class="md-nav__link">
+    Number of features digitized
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-hydrogeological-features" class="md-nav__link">
+    The Hydrogeological Features
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-geological-features" class="md-nav__link">
+    The Geological Features
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#georeferencing-mapsheets" class="md-nav__link">
+    Georeferencing MapSheets
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mozambique" class="md-nav__link">
+    Mozambique
+  </a>
+  
+    <nav class="md-nav" aria-label="Mozambique">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#analysis-of-map-sheets-before-georeferencing" class="md-nav__link">
+    Analysis of map sheets before georeferencing
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#georeferencing-mozambique-southern-region" class="md-nav__link">
+    Georeferencing Mozambique Southern Region
+  </a>
+  
+    <nav class="md-nav" aria-label="Georeferencing Mozambique Southern Region">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#georeferencing-parameters-for-southern-sheet" class="md-nav__link">
+    Georeferencing Parameters for Southern sheet
+  </a>
+  
+    <nav class="md-nav" aria-label="Georeferencing Parameters for Southern sheet">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#test-parameters" class="md-nav__link">
+    Test Parameters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#final-parameters-selected" class="md-nav__link">
+    Final Parameters Selected
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#georeferencing-mozambique-northern-region" class="md-nav__link">
+    Georeferencing Mozambique Northern Region
+  </a>
+  
+    <nav class="md-nav" aria-label="Georeferencing Mozambique Northern Region">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#georeferencing-parameters-for-northern-sheet" class="md-nav__link">
+    Georeferencing Parameters for Northern sheet
+  </a>
+  
+    <nav class="md-nav" aria-label="Georeferencing Parameters for Northern sheet">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#test-parameters_1" class="md-nav__link">
+    Test Parameters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#final-parameters-selected_1" class="md-nav__link">
+    Final Parameters Selected
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#checking-alignment-of-georeferenced-mozambique-images" class="md-nav__link">
+    Checking Alignment of georeferenced Mozambique Images
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zimbabwe" class="md-nav__link">
+    Zimbabwe
+  </a>
+  
+    <nav class="md-nav" aria-label="Zimbabwe">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#analysis-of-map-sheets-before-georeferencing_1" class="md-nav__link">
+    Analysis of Map Sheets before Georeferencing
+  </a>
+  
+    <nav class="md-nav" aria-label="Analysis of Map Sheets before Georeferencing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#georeferencing-parameters-for-the-four-sheets" class="md-nav__link">
+    Georeferencing Parameters for the four sheets
+  </a>
+  
+    <nav class="md-nav" aria-label="Georeferencing Parameters for the four sheets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#test-parameters_2" class="md-nav__link">
+    Test Parameters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#final-parameters-selected_2" class="md-nav__link">
+    Final Parameters Selected
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#refining-zimbabwe-sheet-4" class="md-nav__link">
+    Refining Zimbabwe Sheet 4
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#refining-zimbabwe-sheet-3" class="md-nav__link">
+    Refining Zimbabwe Sheet 3
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#refining-zimbabwe-sheet-2" class="md-nav__link">
+    Refining Zimbabwe Sheet 2
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#refining-zimbabwe-sheet-1" class="md-nav__link">
+    Refining Zimbabwe Sheet 1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#checking-alignment-of-zimbabwe-sheets" class="md-nav__link">
+    Checking Alignment of Zimbabwe sheets
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#refining-zimbabwe-georeferencing-as-a-whole" class="md-nav__link">
+    Refining Zimbabwe Georeferencing as a whole
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#qa-quality-assurance" class="md-nav__link">
+    QA (Quality Assurance)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#georeferencing-qa" class="md-nav__link">
+    Georeferencing QA
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#qa-for-digitized-vector-layers" class="md-nav__link">
+    QA for digitized vector layers
+  </a>
+  
+    <nav class="md-nav" aria-label="QA for digitized vector layers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#topology-checker" class="md-nav__link">
+    Topology checker
+  </a>
+  
+    <nav class="md-nav" aria-label="Topology checker">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#snapping-options" class="md-nav__link">
+    Snapping options
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#digitizing-options" class="md-nav__link">
+    Digitizing options
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#topology-checker-plugin" class="md-nav__link">
+    Topology checker Plugin
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#geometry-checker-plugin" class="md-nav__link">
+    Geometry checker Plugin
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#duplicate-checks-and-geometry-validity" class="md-nav__link">
+    Duplicate checks and Geometry validity
+  </a>
+  
+    <nav class="md-nav" aria-label="Duplicate checks and Geometry validity">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#check-duplicates-by-symbology" class="md-nav__link">
+    Check Duplicates by Symbology
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#check-duplicates-by-sql" class="md-nav__link">
+    Check Duplicates by SQL
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#attribute-table-qa" class="md-nav__link">
+    Attribute table QA
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#qa-for-cartography" class="md-nav__link">
+    QA for cartography
+  </a>
+  
+    <nav class="md-nav" aria-label="QA for cartography">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mozambique-cartography" class="md-nav__link">
+    Mozambique Cartography
+  </a>
+  
+    <nav class="md-nav" aria-label="Mozambique Cartography">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mozambique-legend-and-additional-styling-cues" class="md-nav__link">
+    Mozambique legend and additional styling cues
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mozambique-digitized-layers" class="md-nav__link">
+    Mozambique Digitized layers
+  </a>
+  
+    <nav class="md-nav" aria-label="Mozambique Digitized layers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#number-of-features-digitized" class="md-nav__link">
+    Number of features digitized
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#groundwater-occurrence-features" class="md-nav__link">
+    Groundwater Occurrence Features
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#geology-layers" class="md-nav__link">
+    Geology Layers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#underground-water-features" class="md-nav__link">
+    Underground Water Features
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#water-quality-features" class="md-nav__link">
+    Water Quality Features
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#intakes-and-works-features" class="md-nav__link">
+    Intakes and Works Features
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#zimbabwe-cartography" class="md-nav__link">
+    Zimbabwe Cartography
+  </a>
+  
+    <nav class="md-nav" aria-label="Zimbabwe Cartography">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#zimbabwe-legend" class="md-nav__link">
+    Zimbabwe Legend
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#zimbabwe-digitized-layers" class="md-nav__link">
+    Zimbabwe Digitized Layers
+  </a>
+  
+    <nav class="md-nav" aria-label="Zimbabwe Digitized Layers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#number-of-features-digitized_1" class="md-nav__link">
+    Number of features digitized
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-hydrogeological-features" class="md-nav__link">
+    The Hydrogeological Features
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-geological-features" class="md-nav__link">
+    The Geological Features
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+  <a href="https://github.com/kartoza/IGRAC-ZimAndMozDigitizing/blob/main/docs/digitising-process.md" title="Edit this page" class="md-content__button md-icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+  </a>
+
+
+
+<h1 id="igrac-georeferencing-methodology">IGRAC: Georeferencing Methodology<a class="headerlink" href="#igrac-georeferencing-methodology" title="Permanent link">&para;</a></h1>
+<p>The objectives of this project are:</p>
+<ul>
+<li>To georeference the geological maps from Zimbabwe and Mozambique.</li>
+<li>Digitize the georeferenced sheets capturing the primary features on the sheets.</li>
+<li>Symbolize the vector features that have been captured.</li>
+</ul>
+<p>The primary software that will be used for this is QGIS. The tasks in this project will be split into the three distinct
+sections based on the aims mentioned above.</p>
+<h2 id="georeferencing-mapsheets">Georeferencing MapSheets<a class="headerlink" href="#georeferencing-mapsheets" title="Permanent link">&para;</a></h2>
+<p>The map sheets covers Zimbabwe and Mozambique. The methodology used to georeference and digitize the features will
+largely depend on the quality of the provided map sheets. The process of georeferencing the maps depends on several
+factors:</p>
+<ul>
+<li>What is the spatial resolution of the current map sheets.</li>
+<li>What is the date at which the map sheets were acquired (produced)</li>
+<li>Coordinate reference system of the map sheets.</li>
+<li>What transformation algorithm to use. QGIS provides plenty of these and detailed explanation cen be found from
+<a href="https://docs.qgis.org/testing/en/docs/user_manual/working_with_raster/georeferencer.html?highlight=georeferencer#available-transformation-algorithms">Georeferencing transformation algorithms</a></li>
+</ul>
+<p>For more information about the QGIS Georeferencer can be found on the <a href="https://docs.qgis.org/testing/en/docs/user_manual/working_with_raster/georeferencer.html?highlight=georeferencer#id7">QGIS Documentation website</a></p>
+<h2 id="mozambique">Mozambique<a class="headerlink" href="#mozambique" title="Permanent link">&para;</a></h2>
+<p>There are two map sheets which are provided</p>
+<ul>
+<li>Southern Sheet</li>
+<li>Northern Sheep</li>
+</ul>
+<p>The georeferencing process will likely be similar for these two sheets.</p>
+<h3 id="analysis-of-map-sheets-before-georeferencing">Analysis of map sheets before georeferencing<a class="headerlink" href="#analysis-of-map-sheets-before-georeferencing" title="Permanent link">&para;</a></h3>
+<p>After loading the raster images (<code>Mozambique Hydrological Map_North Region</code> and <code>Mozambique Hydrological Map_South Region</code> tifs)
+into QGIS and doing some investigation. The following conclusion were established:</p>
+<ul>
+<li>
+<p>The Coordinate Reference System (CRS) for the Mozambique raster images (.tif) was unknown. In the  <code>Legenda</code>
+  <code>(Legend)</code> on the <code>Mozambique Hydrological Map_South Region</code> image, it is stated "Projeccao Conica Conforme
+  de Lambert" (Lambert Conic Conformal Projection). The Lambert Conic Conformal Projection requires two parallels,
+  a central meridian, and a Datum. The two parallels and the central meridian were obtained from the scanned maps,
+  and then through research the datum was discovered to be the Tete datum (discovered through this <a href="https://www.ingentaconnect.com/contentone/asprs/pers/2017/00000083/00000005/art00005?crawler=true&amp;mimetype=application/pdf">column</a> by
+  Clifford J. Mugnier for ASPRS.org). A custom CRS was the made using that information.</p>
+</li>
+<li>
+<p>There is a need to create a new custom CRS to use in QGIS for the georeferencing.
+The custom CRS using the Tete datum worked but, due to lack of information on the scanned images, was not
+accurate for georeferencing. A new custom CRS based on the WGS84 datum was made using the proj4 string:</p>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="o">+</span><span class="n">proj</span><span class="o">=</span><span class="n">lcc</span> <span class="o">+</span><span class="n">lat_0</span><span class="o">=</span><span class="mi">0</span> <span class="o">+</span><span class="n">lon_0</span><span class="o">=</span><span class="mf">35.5</span> <span class="o">+</span><span class="n">lat_1</span><span class="o">=-</span><span class="mi">14</span> <span class="o">+</span><span class="n">lat_2</span><span class="o">=-</span><span class="mi">24</span> <span class="o">+</span><span class="n">x_0</span><span class="o">=</span><span class="mi">0</span> <span class="o">+</span><span class="n">y_0</span><span class="o">=</span><span class="mi">0</span> <span class="o">+</span><span class="n">datum</span><span class="o">=</span><span class="n">WGS84</span>
+<span class="o">+</span><span class="n">units</span><span class="o">=</span><span class="n">m</span> <span class="o">+</span><span class="n">no_defs</span>
+</code></pre></div>
+<blockquote>
+<p>The new CRS was made to save having to perform datum transformations in the future. It was then decided that
+georeferencing would be done using the GAUL dataset for reference points because a graticule transformation was
+not possible.</p>
+</blockquote>
+<h3 id="georeferencing-mozambique-southern-region">Georeferencing Mozambique Southern Region<a class="headerlink" href="#georeferencing-mozambique-southern-region" title="Permanent link">&para;</a></h3>
+<p>Multiple iterations were required as the georeferencing was done against a reference dataset and could not
+be done by simply taking the corner graticules from the tif and projecting them into the custom CRS.</p>
+<h4 id="georeferencing-parameters-for-southern-sheet">Georeferencing Parameters for Southern sheet<a class="headerlink" href="#georeferencing-parameters-for-southern-sheet" title="Permanent link">&para;</a></h4>
+<p>Georeferencing is an iterative process, and we needed to try different parameters to establish the most suitable ones
+to use.</p>
+<p>The methods below describe the different parameters that were tested with the raster images.</p>
+<h5 id="test-parameters">Test Parameters<a class="headerlink" href="#test-parameters" title="Permanent link">&para;</a></h5>
+<p>This describes the parameters that were tested, and we found to be not adequate to use for georeferencing.</p>
+<table>
+<thead>
+<tr>
+<th>Iteration</th>
+<th>Transformation Type</th>
+<th>Outcome</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>First</td>
+<td><strong>Linear Transformation</strong></td>
+<td>The resulting image ended up being spatially too different from the reference dataset and so was immediately discarded. See the image below table.</td>
+</tr>
+<tr>
+<td>Second</td>
+<td><strong>Helmert transformation</strong></td>
+<td>Gave a decent result but there were far too many discrepancies between the reference layer and the georeferenced image</td>
+</tr>
+<tr>
+<td>Third</td>
+<td><strong>Helmert Transformation</strong></td>
+<td>The Helmert Transformation was used again but with all Residual pixels for the Ground Control Points (CPs) being under 10. 9 GCPs were used for the referencing. There were too many discrepancies between the reference dataset and the georeferenced image, so it was disregarded as a viable image.</td>
+</tr>
+<tr>
+<td>Fourth</td>
+<td><strong>Polynomial 1 Transformation</strong></td>
+<td>All of the residual pixels were less than 10 and 12 GCPs were used. Again, there were too many discrepancies between the reference dataset and the georeferenced image but there was minimal warping on the polygons.</td>
+</tr>
+<tr>
+<td>Fifth</td>
+<td><strong>Polynomial 1 Transformation</strong></td>
+<td>All of the residual pixels were less than 10 and 17 GCPs were used. There were fewer discrepancies between the reference dataset and the georeferenced image than in the previous iterations but there was slight warping on the polygons.</td>
+</tr>
+<tr>
+<td>Sixth</td>
+<td><strong>Polynomial 2 Transformation</strong></td>
+<td>All of the residual pixels were less than 10 and 18 GCPs were used. There were fewer discrepancies between the reference dataset and the georeferenced image than in the previous iterations but there was warping on the polygons.</td>
+</tr>
+<tr>
+<td>Seventh</td>
+<td><strong>Thin Plate Spline transformation</strong></td>
+<td>All residual pixels were zero but this was likely a false result. This iteration had the best results for lining up the georeferenced image with the reference dataset. 102 GCPs were used to help correct discrepancies from previous iterations. The main issue with this transformation was the significant warping of the polygons in the georeferenced image.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Discarded first iteration of georeferencing Mozambique South</strong>
+<img alt="Mozambique Attempt 1" src="../images/moz_img/MozSouth_attempt1.png" /></p>
+<h5 id="final-parameters-selected">Final Parameters Selected<a class="headerlink" href="#final-parameters-selected" title="Permanent link">&para;</a></h5>
+<p>After testing other types of transformations it was decided that using the <code>Polynomial 1 transformation</code> gave the best
+result. This transformation type warped the internal polygons of Mozambique's Southern Region the least but more
+GCPs would help to correct the discrepancies between the reference dataset and the tif. 55 GCPs, with residual pixels
+lower than 10, were used for the georeferencing and ended up with the best result. The image below shows the
+georeferencer with the GCPs on the map and the GCP table showing the residuals being below 10 (Ground Control
+Point 40 has the highest Residual Pixels at 8.976885).
+<img alt="Mozambique South Georeferencer" src="../images/moz_img/MozSouth_GCPS_1.png" /></p>
+<p>The image below shows the GCPs for Mozambique's Southern Region relative to the GAUL reference dataset.
+<img alt="Mozambique South GCPs on GAUL" src="../images/moz_img/MozSouth_GCPS_2.png" /></p>
+<p>The GCPs for Mozambique's Southern Region can be found <a href="../gcps/MozSouth_Poly1.points">here</a>. There were still small discrepancies between the
+georeferenced image and the reference dataset but to correct the discrepancies would warp the polygons too much to
+be a viable image.</p>
+<h3 id="georeferencing-mozambique-northern-region">Georeferencing Mozambique Northern Region<a class="headerlink" href="#georeferencing-mozambique-northern-region" title="Permanent link">&para;</a></h3>
+<p><strong>Note:</strong> Fewer iterations were required for the Northern Region of Mozambique as it was done using knowledge gained
+from georeferencing the Southern Region. The first 2 iterations were also done before the final iteration of
+georeferencing the South Region of Mozambique so were done before it was decided that using the Thin Plate Spline
+transformation was providing false results.</p>
+<h4 id="georeferencing-parameters-for-northern-sheet">Georeferencing Parameters for Northern sheet<a class="headerlink" href="#georeferencing-parameters-for-northern-sheet" title="Permanent link">&para;</a></h4>
+<h5 id="test-parameters_1">Test Parameters<a class="headerlink" href="#test-parameters_1" title="Permanent link">&para;</a></h5>
+<p>This describes the parameters that were tested, and we found to be not adequate to use for georeferencing.</p>
+<table>
+<thead>
+<tr>
+<th>Iteration</th>
+<th>Transformation Type</th>
+<th>Outcome</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>First</td>
+<td><strong>Thin Plate Spline transformation</strong></td>
+<td>All of the residual pixels were a false zero. 10 GCPs were used and resulted in good approximation that had some discrepancies between the georeferenced image and the reference dataset.</td>
+</tr>
+<tr>
+<td>Second</td>
+<td><strong>Thin Plate Spline transformation</strong></td>
+<td>All the Residual Pixels were a false zero. Points were added to the previous attempt's GCPs to total 201 GCPs. The Northern Region of Mozambique had many small islands and outlying points that had to be 'forced' into the correct place and this caused significant warping on the image.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="final-parameters-selected_1">Final Parameters Selected<a class="headerlink" href="#final-parameters-selected_1" title="Permanent link">&para;</a></h5>
+<p>After testing other types of transformations it was decided that using a <code>Polynomial 3 transformation</code> with 149 GCP
+gave the best results. All the Residual Pixels for the GCPs were under 10. A polynomial 3 transformation was chosen as
+it warped the image the least but had the fewest discrepancies between the reference dataset and the georeferenced
+image. The image below shows the georeferencer with the GCPs on the map and the GCP table showing the residuals
+being below 10 (Ground Control Point 124 has the highest Residual Pixels at 9.948533).
+<img alt="Mozambique North Georeferencer" src="../images/moz_img/MozNorth_GCPS_1.png" /></p>
+<p>The image below shows the GCPs for Mozambique's Northern Region relative to the GAUL reference dataset.
+<img alt="Mozambique North GCPs on GAUL" src="../images/moz_img/MozNorth_GCPS_2.png" /></p>
+<p>The GCPs for Mozambique's Northern Region can be found <a href="../gcps/MozNorth_Poly3.points">here</a>.</p>
+<h3 id="checking-alignment-of-georeferenced-mozambique-images">Checking Alignment of georeferenced Mozambique Images<a class="headerlink" href="#checking-alignment-of-georeferenced-mozambique-images" title="Permanent link">&para;</a></h3>
+<p>Due to the nature of georeferencing scanned maps, there are slight discrepancies where the sheets meet each other but
+they are minimal.</p>
+<p><img alt="Mozambique join between sheets" src="../images/moz_img/maps_join.png" /></p>
+<p>The main discrepancy for Mozambique's Southern Region between the southernmost border of the <strong>Mozambique
+Hydrogeological Map_South Region</strong> tif and the GAUL reference dataset.</p>
+<!-- At the original scale of the map (1:1 000 000) the discrepancies are within an acceptable error range. 1942.229m 
+discrepancy at map scale = 1.9 mm error on the original map-->
+
+<p><img alt="Mozambique South Discrepancies Image" src="../images/moz_img/MozSouth_Discrepancy.png" /></p>
+<p>There are multiple discrepancies between the Northern Border of <strong>Mozambique Hydrogeological Map_North Region</strong>
+tif and the GAUL reference dataset. There are discrepancies where the administration boundary on the map and the
+GAUL boundary differ, and where the Ruvuma (formerly Rovuma) River's path on the <strong>Mozambique Hydrogeological
+Map_North Region</strong> tif differs from its path on the GAUL dataset( the path on the GAUL dataset is ratified by GLAD
+Landsat imagery).
+<img alt="Mozambique North Discrepancies 1" src="../images/moz_img/MozNorth_Discrepancies.png" /></p>
+<p>A closer look at one of the worse discrepancies:
+<img alt="Mozambique North Discrepancies 2" src="../images/moz_img/MozNorth_Discrepancies_2.png" /></p>
+<!-- At the original scale of the map (1:1 000 000) the discrepancies are within an acceptable error range. 3465.166m
+discrepancy at map scale = 3.4 mm error on the original map-->
+
+<h2 id="zimbabwe">Zimbabwe<a class="headerlink" href="#zimbabwe" title="Permanent link">&para;</a></h2>
+<p>Four map sheets were provided to be georeferenced.</p>
+<h3 id="analysis-of-map-sheets-before-georeferencing_1">Analysis of Map Sheets before Georeferencing<a class="headerlink" href="#analysis-of-map-sheets-before-georeferencing_1" title="Permanent link">&para;</a></h3>
+<p>After loading the raster images into QGIS and doing some investigation. The following conclusions were established:</p>
+<ul>
+<li>
+<p>Attempt to find any information about the Zimbabwe projection, datum, etc. through research. Finding the memoire
+  for the sheets would be the ideal situation. The maps being from 1986 mean that their projection system was most
+  likely based on the Arc 1950 datum (which is based on the Clarke 1880 ellipsoid).</p>
+</li>
+<li>
+<p>Research did not yield the projection used for creating the sheets. The projection is required to make custom
+  projected CRS for better georeferencing. The closest option found during research was a report from UNESCO
+  from 1995 (Hydrogeological Maps A Guide and Standard Legend. Vol. 17., by Struckmeier, Wilhelm F, and Jean
+  Margat) referencing the Zimbabwe Hydrogeological maps stating that "preferably UTM grid" was used for map
+  locations. The Central Meridian (lon_0) and the Latitude of Origin (lat_0) were taken from the four Zimbabwe sheets
+  and the <strong>+a</strong> and <strong>+rf</strong> values are for the Arc 1950 datum. Using this information, a custom tmerc (Transverse
+  mercator) projection system was made using the proj4 string:</p>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="o">+</span><span class="n">proj</span><span class="o">=</span><span class="n">tmerc</span> <span class="o">+</span><span class="n">lat_0</span><span class="o">=-</span><span class="mi">19</span> <span class="o">+</span><span class="n">lon_0</span><span class="o">=</span><span class="mi">30</span> <span class="o">+</span><span class="n">k</span><span class="o">=</span><span class="mi">1</span> <span class="o">+</span><span class="n">x_0</span><span class="o">=</span><span class="mi">0</span> <span class="o">+</span><span class="n">y_0</span><span class="o">=</span><span class="mi">0</span> <span class="o">+</span><span class="n">a</span><span class="o">=</span><span class="mf">6378249.145</span> <span class="o">+</span><span class="n">rf</span><span class="o">=</span><span class="mf">293.4663077</span> 
+<span class="o">+</span><span class="n">units</span><span class="o">=</span><span class="n">m</span> <span class="o">+</span><span class="n">no_defs</span>
+</code></pre></div>
+<h4 id="georeferencing-parameters-for-the-four-sheets">Georeferencing Parameters for the four sheets<a class="headerlink" href="#georeferencing-parameters-for-the-four-sheets" title="Permanent link">&para;</a></h4>
+<p>Georeferencing is an iterative process, and we needed to try different parameters to establish the most suitable ones
+to use.</p>
+<p>The methods below describe the different parameters that were tested with the raster images.</p>
+<h5 id="test-parameters_2">Test Parameters<a class="headerlink" href="#test-parameters_2" title="Permanent link">&para;</a></h5>
+<table>
+<thead>
+<tr>
+<th>Sheet</th>
+<th>Iteration</th>
+<th>Transformation Type</th>
+<th>Outcome</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>One</td>
+<td>First</td>
+<td><strong>Thin Plate Spline transformation</strong></td>
+<td>11 GCPs were used but all the points had false zeroes for the Residual Pixels. There were multiple discrepancies between the georeferenced image and the reference image.</td>
+</tr>
+<tr>
+<td>Two</td>
+<td>First</td>
+<td><strong>Thin Plate Spline transformation</strong></td>
+<td>12 GCPs were used but all the points had false zeroes for the Residual Pixels. There were multiple discrepancies between the georeferenced image and the reference image.</td>
+</tr>
+<tr>
+<td>Three</td>
+<td>First</td>
+<td><strong>Thin Plate Spline transformation</strong></td>
+<td>8 GCPs were used but all the points had false zeroes for the Residual Pixels. There were multiple discrepancies between the georeferenced image and the reference image.</td>
+</tr>
+<tr>
+<td>Four</td>
+<td>First</td>
+<td><strong>Thin Plate Spline transformation</strong></td>
+<td>12 GCPs were used but all the points had false zeroes for the Residual Pixels. There were multiple discrepancies between the georeferenced image and the reference image.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="final-parameters-selected_2">Final Parameters Selected<a class="headerlink" href="#final-parameters-selected_2" title="Permanent link">&para;</a></h5>
+<p>The first iteration of georeferencing Zimbabwe Sheet 4 was the best result of the initial georeferencing attempts. So it
+was decided that Sheet 4 should be refined first and then used as a reference basis for the other images.</p>
+<h3 id="refining-zimbabwe-sheet-4">Refining Zimbabwe Sheet 4<a class="headerlink" href="#refining-zimbabwe-sheet-4" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Iteration</th>
+<th>Transformation Type</th>
+<th>Outcome</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>First</td>
+<td><strong>Thin Plate Spline transformation</strong></td>
+<td>Done using 46 GCPs, all with a false zero value for their Residual Pixels. There were still discrepancies between the GAUL reference dataset and the georeferenced sheet's boundaries.</td>
+</tr>
+<tr>
+<td>Second</td>
+<td><strong>Thin Plate Spline transformation</strong></td>
+<td>Done using 75 GCPs, all with a false zero value for their Residual Pixels. There were still major discrepancies between the GAUL reference dataset and georeferenced sheet's boundaries. This transformation type also warped the internal polygons of the georeferenced image.</td>
+</tr>
+<tr>
+<td>Third</td>
+<td><strong>Polynomial 3 transformation</strong></td>
+<td>After a discussion, it was decided that the Residual Pixels from a <code>Thin plate Spline transformation</code> being zero was a false reading and so a <code>Polynomial 3 transformation</code> was chosen as it gave the best results. 42 GCPs were used with all the Residual Pixels being less than 10 (Point 16 was the GCP with the highest Residual Pixel value of 9.592993). The images below show the results of this transformation:</td>
+</tr>
+</tbody>
+</table>
+<p>The image below shows the georeferencer and part of the associated GCP table:
+<img alt="Zim Sheet 4 Georeferencer" src="../images/zim_img/zim_sheet4_poly3.png" /></p>
+<p>The image below shows the GCPs for Zimbabwe Sheet 4 relative to the GAUL reference dataset over the GLAD
+Landsat dataset.
+<img alt="Zim Sheet 4 GCPs on GAUL" src="../images/zim_img/zim_sheet4_gcps.png" /></p>
+<p>The GCPs for the <code>Polynomial 3 transformation</code> can be found <a href="../gcps/zimbabwe_sheet4_Poly3.points">here</a>.</p>
+<blockquote>
+<p><strong>Note:</strong> There was not a lot of spatial information in the North Western section (Central region of Zimbabwe) of the
+sheet and the roads that are represented on the scanned map do not intersect with each other as they would in the
+real world.</p>
+</blockquote>
+<h3 id="refining-zimbabwe-sheet-3">Refining Zimbabwe Sheet 3<a class="headerlink" href="#refining-zimbabwe-sheet-3" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Iteration</th>
+<th>Transformation Type</th>
+<th>Outcome</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>First</td>
+<td><strong>Thin Plate Spline transformation</strong></td>
+<td>Done using 29 GCPs, all with a false zero value for their Residual Pixels. There were significant discrepancies between the GAUL reference dataset and georeferenced sheet's boundaries.</td>
+</tr>
+<tr>
+<td>Second</td>
+<td><strong>Polynomial 1 transformation</strong></td>
+<td>This transformation was chosen as it gave the best result out of the transformation types. Done using 11 GCPs with all the Residual Pixels for the GCPs were lower than 10. Despite all of Sheet 3's GCPs having lower Residual Pixel values than Sheet 4's GCPs, it had greater discrepancies along its western boundary. The images below show the results of this transformation:</td>
+</tr>
+</tbody>
+</table>
+<p>The Image below shows the discrepancies along Sheet 3's western boundary
+<img alt="Zim Sheet 3 western boundary discrepancy" src="../images/zim_img/zim_sheet3_discrepancy.png" /></p>
+<p>The image below shows the georeferencer and part of the associated GCP table (Point 7 was the GCP with the highest
+Residual Pixel value of 1.211239):
+<img alt="Zim Sheet 3 Georeferencer" src="../images/zim_img/zim_sheet3_poly1.png" /></p>
+<p>The image below shows the GCPs for Zimbabwe Sheet 4 relative to the GAUL reference dataset over the GLAD
+Landsat dataset.
+<img alt="Zim sheet 3 GCPs on GAUL" src="../images/zim_img/zim_sheet3_gcps.png" /></p>
+<p>The GCPs for the <code>Polynomial 1 transformation</code> can be found <a href="../gcps/zimbabwe_sheet3_Poly1.points">here</a>.</p>
+<blockquote>
+<p><strong>Note:</strong> There was not a lot of spatial information in the North Eastern section (Central region of Zimbabwe) of the
+sheet and the roads that are represented on the scanned map do not intersect with each other as they would in the real world.</p>
+</blockquote>
+<h3 id="refining-zimbabwe-sheet-2">Refining Zimbabwe Sheet 2<a class="headerlink" href="#refining-zimbabwe-sheet-2" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Iteration</th>
+<th>Transformation Type</th>
+<th>Outcome</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>First</td>
+<td><strong>Thin Plate Spline transformation</strong></td>
+<td>This was done using 53 GCPs, all with a false zero value for their Residual Pixels. There were significant discrepancies between the GAUL reference dataset and georeferenced sheet's boundaries.</td>
+</tr>
+<tr>
+<td>Second</td>
+<td><strong>Polynomial 3 transformation</strong></td>
+<td>This was done using 27 GCPs, where all the Residual Pixels for the GCPs were lower than 10. A <code>Polynomial 3 transformation</code> was used as it gave the best result out of the transformation types. The images below show the results of this transformation:</td>
+</tr>
+</tbody>
+</table>
+<p>The image below shows the georeferencer and part of the associated GCP table (Point 18 was the GCP with the
+highest Residual Pixel value of 9.794608):
+<img alt="Zim Sheet 2 Georeferencer" src="../images/zim_img/zim_sheet2_poly3.png" /></p>
+<p>The image below shows the GCPs for Zimbabwe Sheet 2 relative to the GAUL reference dataset over the GLAD
+Landsat dataset.
+<img alt="Zim sheet 2 GCPs on GAUL" src="../images/zim_img/zim_sheet2_gcps.png" /></p>
+<p>The GCPs for the <code>Polynomial 3 transformation</code> can be found <a href="../gcps/zimbabwe_sheet2_Poly3.points">here</a>.</p>
+<blockquote>
+<p><strong>Note:</strong> There was not a lot of spatial information in the South Western section (Central region of Zimbabwe) of the
+sheet and the roads that are represented on the scanned map do not intersect with each other as they would in the
+real world. The Great Dyke was used where it was clear that a GCP could be placed.</p>
+</blockquote>
+<h3 id="refining-zimbabwe-sheet-1">Refining Zimbabwe Sheet 1<a class="headerlink" href="#refining-zimbabwe-sheet-1" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Iteration</th>
+<th>Transformation Type</th>
+<th>Outcome</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>First</td>
+<td><strong>Thin Plate Spline</strong></td>
+<td>This was done using 53 GCPs all with a false zero value for their Residual Pixels. There were significant discrepancies between the GAUL reference dataset and georeferenced sheet's boundaries.</td>
+</tr>
+<tr>
+<td>Second</td>
+<td><strong>Polynomial 1 transformation</strong></td>
+<td>This was done using 23 GCPs, where all the Residual Pixels for the GCPs were lower than 10. A <code>Polynomial 1 transformation</code> was used as it gave the best result out of the transformation types. Lake Kariba would have been ideal for reference points, however in the years since the map was published Lake Kariba's water level has lowered significantly and the shoreline has changed. The images below show the results of this transformation:</td>
+</tr>
+</tbody>
+</table>
+<p>All the Residual Pixels for the GCPs were lower than 10 (Point 17 was the GCP with the highest Residual Pixel value of
+7.111510).
+<img alt="Zim Sheet 1 Georeferencer" src="../images/zim_img/zim_sheet1_poly1.png" /></p>
+<p>The image below shows the GCPs for Zimbabwe Sheet 1 relative to the GAUL reference dataset over the GLAD
+Landsat dataset.
+<img alt="Zim Sheet 1 GCPs on GAUL" src="../images/zim_img/zim_sheet1_gcps.png" /></p>
+<p>The GCPs for the <code>Polynomial 1 transformation</code> can be found <a href="../gcps/zimbabwe_sheet1_Poly1.points">here</a>.</p>
+<blockquote>
+<p><strong>Note:</strong> There was some clear spatial information in the South Eastern section (Central region of Zimbabwe) of the
+sheet and the roads that are represented on the scanned map do not intersect with each other as they would in the
+real world. The Shangani River was used where it was clear that GCPs could be placed.</p>
+</blockquote>
+<h3 id="checking-alignment-of-zimbabwe-sheets">Checking Alignment of Zimbabwe sheets<a class="headerlink" href="#checking-alignment-of-zimbabwe-sheets" title="Permanent link">&para;</a></h3>
+<p>Due to the nature of the scanned maps, there are discrepancies where the sheets interact with each other and there
+was a lack of reference information to be used as GCPs. The main discrepancies are where the four sheets meet in the
+central area of Zimbabwe. The discrepancies and their respective measurements are highlighted using the same
+coloured lines in the image below. The discrepancies between sheets edges get smaller closer to the country boundary
+of Zimbabwe due to there being multiple GCPs along the administration boundary.</p>
+<!-- The largest discrepancy is 2.52 km which would be an error of 2.5 mm on the original map-->
+<p><img alt="Zimbabwe Discrepancies Image" src="../images/zim_img/zim_sheets_intersection.png" /></p>
+<h3 id="refining-zimbabwe-georeferencing-as-a-whole">Refining Zimbabwe Georeferencing as a whole<a class="headerlink" href="#refining-zimbabwe-georeferencing-as-a-whole" title="Permanent link">&para;</a></h3>
+<p>It was noticed that the original images provided were already warped before any form of georeferencing took place. This
+meant that the original images didn't line up correctly with each other. This issue meant that the original georeferencing
+had major discrepancies in the central region of Zimbabwe.</p>
+<p>The solution to this issue was to stitch the images together in an external software (Inkscape) and then georeference
+this stitched image. The stitched together image and its associated GCPs looked like this:
+<img alt="Zim Stitched and GCPs" src="../images/zim_img/zim_stitched_gcps.png" /></p>
+<p>This image gave the best result of the georeferencing so was used for the digitization process.</p>
+<p>All the Residual Pixels for the GCPs were less than 10 (Point 0 having the highest residual pixel value of 9.662356).</p>
+<p>The GCPs from this transformation can be found <a href="../gcps/zim_stitched_poly3.points">here</a>.</p>
+<h2 id="qa-quality-assurance">QA (Quality Assurance)<a class="headerlink" href="#qa-quality-assurance" title="Permanent link">&para;</a></h2>
+<p>This section is divided into three parts:</p>
+<ul>
+<li>QA for the georeferenced worksheets</li>
+<li>QA for the digitized vector layers</li>
+<li>QA for the cartography</li>
+</ul>
+<h2 id="georeferencing-qa">Georeferencing QA<a class="headerlink" href="#georeferencing-qa" title="Permanent link">&para;</a></h2>
+<p>The georeferenced focused on two areas split by different map sheets. The test will cover the following scenarios</p>
+<ul>
+<li>Merging layers. Zimbabwe consists of four georeferenced sheets, and we need to stitch the georeferenced layers
+  into a seamless single raster image. Mozambique consists of two map sheets, and we need to establish if these
+  sheets can be combined.</li>
+<li>Overlay with some standard open data. Vector data could be from OSM and any raster imagery.</li>
+</ul>
+<h2 id="qa-for-digitized-vector-layers">QA for digitized vector layers<a class="headerlink" href="#qa-for-digitized-vector-layers" title="Permanent link">&para;</a></h2>
+<p>The following checks were carried out.</p>
+<ul>
+<li>Duplicate checks and Geometry validity</li>
+<li>Attribute table QA</li>
+<li>Topology checker</li>
+</ul>
+<h3 id="topology-checker">Topology checker<a class="headerlink" href="#topology-checker" title="Permanent link">&para;</a></h3>
+<p>This primarily focuses on establishing if the vector features follow the vector topological model. Topology is a set of
+rules that model the relationships between neighbouring points, lines, and polygons and determines how they share
+geometry.</p>
+<p>The following topological rules apply to the vector data:</p>
+<ul>
+<li>Boundaries should not cross each other (i.e., boundaries which would cross must be split at their intersection
+  to form district boundaries). On the contrary, lines can cross each other, e.g. bridges over rivers.</li>
+<li>Lines and boundaries share nodes only if their endpoints are identical. Lines or boundaries can be forced to share
+  a common node by snapping them together. This is particularly important since nodes are not represented in the
+  coordinate file, but only implicitly as endpoints of lines and boundaries.</li>
+<li>Common area boundaries should appear only once (i.e., should not be double digitized).</li>
+<li>Areas must be explicitly closed. This means that it must be possible to complete each area by following one or
+  more boundaries that are connected by common nodes, and that such tracings result in closed areas.</li>
+<li>It is recommended that area features and linear features be placed in separate layers. However, if area features
+  and linear features must appear in one layer, common boundaries should be digitized only once. For example, a
+  boundary that is also a line (e.g., a road which is also a field boundary), should be digitized as a boundary to
+  complete the area(s), and a boundary which is functionally also a line should be labelled as a line by a distinct
+  category number.</li>
+</ul>
+<h4 id="snapping-options">Snapping options<a class="headerlink" href="#snapping-options" title="Permanent link">&para;</a></h4>
+<p>QGIS provides snapping tools which allow digitized vector data to follow the topological model and to be captured in a
+more timely manner.</p>
+<p>General QGIS snapping configuration:
+<img alt="snapping_config" src="../images/snapping_config.png" /></p>
+<p>Project snapping options:
+<img alt="generic snapping options" src="../images/generic_snapping.png" /></p>
+<p>The snapping settings were the same for digitizing both Mozambique and Zimbabwe. They were set out as in the image
+below:
+<img alt="project snapping settings" src="../images/project_snapping_settings.png" /></p>
+<ul>
+<li><img alt="snapping enabled" src="../images/snapping_enabled.png" />: This means that snapping was enabled. Snapping helps to reduce the number of slivers and wedges
+  created during the digitizing process.</li>
+<li><img alt="vertex snapping" src="../images/vertex_snapping.png" />: This means that QGIS will snap to previously digitized vertices according to the defined tolerance.</li>
+<li><img alt="segment snapping" src="../images/segment_snapping.png" />: This means that QGIS will snap to previously digitized segments according to the defined tolerance.</li>
+<li><img alt="snapping tolerance" src="../images/snapping_tolerance.png" />: This is a user defined tolerance. For this project is was set at 10 pixels.</li>
+<li><img alt="tracing" src="../images/tracing.png" />: When this option is enabled QGIS will trace along previously digitized features. This feature was utilized in this project to speed up digitizing features that shared common vertices and/or segments.</li>
+</ul>
+<h4 id="digitizing-options">Digitizing options<a class="headerlink" href="#digitizing-options" title="Permanent link">&para;</a></h4>
+<p>The digitizing of the various features was done using a mixture of <code>Digitize with Segment</code> and <code>Stream Digitizing</code>.
+<img alt="digitizing options" src="../images/digitizing_options.png" /></p>
+<ul>
+<li><code>Digitize with Segment</code> was used when digitizing larger features and straighter lines.</li>
+<li><code>Stream Digitizing</code> was used for smaller features and for more complex shapes within features (such as corners
+  or multi-curved lines).</li>
+</ul>
+<h4 id="topology-checker-plugin">Topology checker Plugin<a class="headerlink" href="#topology-checker-plugin" title="Permanent link">&para;</a></h4>
+<p>This was used to make sure the data conformed to the topology rules. Various rules were tested based on the data type.</p>
+<p><img alt="topology_checker" src="../images/topology_checker.png" /></p>
+<p>Different test are applicable for dataset type. The tool allows the following rules to be tested:
+<img alt="topology_settings" src="../images/topology_checker_settings.png" /></p>
+<h4 id="geometry-checker-plugin">Geometry checker Plugin<a class="headerlink" href="#geometry-checker-plugin" title="Permanent link">&para;</a></h4>
+<p>This tool also provides a way to check if the topological relationship between features exists and are conformant.</p>
+<p><img alt="image_settings_geo" src="../images/geom_checker_settings.png" /></p>
+<h3 id="duplicate-checks-and-geometry-validity">Duplicate checks and Geometry validity<a class="headerlink" href="#duplicate-checks-and-geometry-validity" title="Permanent link">&para;</a></h3>
+<p>They are two modalities for duplicates:</p>
+<ul>
+<li>Duplicate by attribute table</li>
+<li>Duplicate by geometry values</li>
+</ul>
+<p>In our case we are interested in checking for duplicates by geometry. This will show us if we have two features that
+are captured at the same location. The default setting in QGIS is to run algorithms which adhere to the simple feature
+specification ( valid geometry).</p>
+<ol>
+<li>In this case we had to run the algorithm <code>Fix geometries</code>
+  <img alt="Fix Geometries" src="../images/fix-geometries.png" /></li>
+<li>This was followed by running the algorithm <code>delete duplicate geometries</code> from the vector layers.
+  <img alt="img.png" src="../images/delete-geometries.png" /></li>
+</ol>
+<h4 id="check-duplicates-by-symbology">Check Duplicates by Symbology<a class="headerlink" href="#check-duplicates-by-symbology" title="Permanent link">&para;</a></h4>
+<p>Once all the duplicated features are removed from the vector features, we additionally checked for duplicates using
+<a href="https://kartoza.com/blog/qgis/finding-and-fixing-topology-and-geometry-errors-in-qgis">QGIS Symbology</a></p>
+<h4 id="check-duplicates-by-sql">Check Duplicates by SQL<a class="headerlink" href="#check-duplicates-by-sql" title="Permanent link">&para;</a></h4>
+<p>We ran some additional SQL commands in the <code>DBManager</code> to check for duplicates.</p>
+<div class="highlight"><pre><span></span><code><span class="k">select</span><span class="w"> </span><span class="n">geom</span><span class="p">,</span><span class="w"> </span><span class="k">count</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"></span>
+<span class="k">from</span><span class="w"> </span><span class="n">geology_lines</span><span class="w"></span>
+<span class="k">group</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">geom</span><span class="w"></span>
+<span class="k">HAVING</span><span class="w"> </span><span class="k">count</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">1</span><span class="w"></span>
+</code></pre></div>
+<p>This was run against all the layers that were generated for the Zimbabwe and Mozambique vector layers.</p>
+<h3 id="attribute-table-qa">Attribute table QA<a class="headerlink" href="#attribute-table-qa" title="Permanent link">&para;</a></h3>
+<p>This check was done in the geopackage database to check if all the values are stored with the correct values.
+Since in the QGIS projects the values are linked by lookup tables. The lookup tables were not included the final project
+as they were for digitizing.</p>
+<p><strong>Lookup table in QGIS</strong>
+This is an example from the Zimbabwe geopackage.
+<img alt="Lookup values" src="../images/lookup-features.png" /></p>
+<p><strong>Actual values in the geopackage</strong>
+This is an example from the Zimbabwe geopackage.
+<img alt="db features" src="../images/db-features.png" /></p>
+<p><strong>Zimbabwe vector features</strong>
+The image below depicts the vectorised geology features from the above example.
+<img alt="Zimbabwe Vector Features" src="../images/zim_img/zim_digitized_geology_features.png" /></p>
+<p><strong>Zimbabwe Geology Lines</strong>
+A total of 9259 geology features were captured.</p>
+<h2 id="qa-for-cartography">QA for cartography<a class="headerlink" href="#qa-for-cartography" title="Permanent link">&para;</a></h2>
+<h3 id="mozambique-cartography">Mozambique Cartography<a class="headerlink" href="#mozambique-cartography" title="Permanent link">&para;</a></h3>
+<p>The original map sheets contain a legend and other images which define how individual features should be symbolized.
+Not all of the features on the original legend were digitized, only the features specified by the client were digitized.</p>
+<h4 id="mozambique-legend-and-additional-styling-cues">Mozambique legend and additional styling cues<a class="headerlink" href="#mozambique-legend-and-additional-styling-cues" title="Permanent link">&para;</a></h4>
+<p><img alt="moz_legend1" src="../images/moz_legend_1.png" /></p>
+<p><img alt="moz_legend2" src="../images/moz_legend_2.png" /></p>
+<p><img alt="moz_legend_3" src="../images/moz_legend_3.png" /></p>
+<p>QGIS offers advanced cartography options but matching the legend to the symbology in QGIS involves considerable
+amount of time and effort. The symbology rules match the legend on the features that where digitized but some issues
+occur that will still need to be attended to:</p>
+<ul>
+<li>There is no 1 to 1 match from translating legend to symbology because the original dataset might have been made
+using a different GIS software and further refined in software like photoshop. The features were digitized and then
+styled using 'Map units' so that the styling was consistent with the original map and didn't vary greatly through the
+various scales as the map was viewed.</li>
+<li>Where SVG symbols were used to label some features, they needed to be scaled properly so that they could be
+visualized at the correct scale.
+<img alt="label_svg" src="../images/moz_img/svg_labels.png" /></li>
+<li>Scale of the map: Since the original map is a small scale map, all features that are visible on the map visually look
+nice or closely match the original legend at some predefined scales in QGIS.</li>
+</ul>
+<h4 id="mozambique-digitized-layers">Mozambique Digitized layers<a class="headerlink" href="#mozambique-digitized-layers" title="Permanent link">&para;</a></h4>
+<p>The image below depicts the vectorised features of Mozambique.
+<img alt="moz_digitized_look" src="../images/moz_img/moz_digitized_features.png" /></p>
+<p>The QGIS project that will be shared are all stored in the geopackage and their corresponding style files. SVG symbols
+are also embedded in the projects and can be extracted to file.</p>
+<p><strong>Note:</strong> If the symbology needs to be used in GeoNode (SLD), additional work should be done to tweak the exported SLD.</p>
+<h5 id="number-of-features-digitized">Number of features digitized<a class="headerlink" href="#number-of-features-digitized" title="Permanent link">&para;</a></h5>
+<p>The images below shows the break down of the 5377 digitized features in Mozambique:</p>
+<table>
+<thead>
+<tr>
+<th>Portuguese Features</th>
+<th>English Features</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img alt="Mozambique Portuguese Features" src="../images/moz_img/moz_portuguese_features.png" /></td>
+<td><img alt="Mozambique English Features" src="../images/moz_img/moz_english_features.png" /></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>The layers were initially digitized in English and then duplicated and translated into Portuguese as this was faster
+than the GIS specialist working in a language they did not speak.</p>
+</blockquote>
+<p>The features for Mozambique were split into lines, points, and polygons depending on how the features were
+represented on the original maps.</p>
+<h5 id="groundwater-occurrence-features">Groundwater Occurrence Features<a class="headerlink" href="#groundwater-occurrence-features" title="Permanent link">&para;</a></h5>
+<p>All of the Groundwater Occurrence features for Mozambique are polygons and have been styled to be as close to
+the original map's styling as possible. On the original map, the groundwater occurrence features are listed first in the
+legend but in the project they are at the bottom of the layers list because otherwise none of the other layers would
+be visible.</p>
+<table>
+<thead>
+<tr>
+<th>Portuguese Features</th>
+<th>English Features</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img alt="Groundwater Features Port" src="../images/moz_img/groundwater_features_port.png" /></td>
+<td><img alt="Groundwater Features Eng" src="../images/moz_img/groundwater_features_eng.png" /></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>The bottom feature with a zero [0] feature count is the <code>Else</code> rule to catch any features that have been digitized but
+have not been assigned values in the attribute table. The <code>Else</code> rule was used for digitizing and, at the client's
+request, is not included in the final project.</p>
+</blockquote>
+<h5 id="geology-layers">Geology Layers<a class="headerlink" href="#geology-layers" title="Permanent link">&para;</a></h5>
+<p>The Geology features were digitized as points or lines depending on how they were represented on the original map.
+The stratigraphic columns needed to have special labels to represent the entire column.</p>
+<table>
+<thead>
+<tr>
+<th>Portuguese Features</th>
+<th>English Features</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img alt="Geo Features Port" src="../images/moz_img/geo_features_port.png" /></td>
+<td><img alt="Geo Features Eng" src="../images/moz_img/geo_features_eng.png" /></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>The bottom feature with a zero [0] feature count is the <code>Else</code> rule to catch any features that have been digitized but
+have not been assigned values in the attribute table. The <code>Else</code> rule was used for digitizing and, at the client's
+request, is not included in the final project.</p>
+</blockquote>
+<p>The stratigraphic columns on the original map had linked symbols that could not accurately represented in an attribute
+table. The solution was to clip the symbols from the original map and then use them as svg labels offset from the points.
+The labels only appear between a scale of 1:800000 and 1:100000 because above 1:800000 the labels wouldn't appear
+due to overlap and below 1:100000 the labels take up too much screen space so are unreadable.</p>
+<table>
+<thead>
+<tr>
+<th>1:800000</th>
+<th>1:100000</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img alt="SVGs big scale" src="../images/moz_img/moz_svg_labels_bigscale.png" /></td>
+<td><img alt="SVGs small scale" src="../images/moz_img/moz_svg_labels_smallscale.png" /></td>
+</tr>
+</tbody>
+</table>
+<h5 id="underground-water-features">Underground Water Features<a class="headerlink" href="#underground-water-features" title="Permanent link">&para;</a></h5>
+<p>The Underground Water features were digitized as points, lines, or polygons depending on how they were represented
+on the original maps. Lines with depth are styled to have the depth as a label along the lines and flow direction lines
+were digitized as lines and styled as arrows.</p>
+<table>
+<thead>
+<tr>
+<th>Portuguese Features</th>
+<th>English Features</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img alt="Underground water Features Port" src="../images/moz_img/underground_water_features_port.png" /></td>
+<td><img alt="Underground water Features Eng" src="../images/moz_img/underground_water_features_eng.png" /></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>The bottom feature with a zero [0] feature count is the <code>Else</code> rule to catch any features that have been digitized but
+have not been assigned values in the attribute table. The <code>Else</code> rule was used for digitizing and, at the client's
+request, is not included in the final project.</p>
+</blockquote>
+<p>The depth values are labels that are parallel to the digitized lines.
+<img alt="isoline depth labels" src="../images/moz_img/isoline_depths.png" /></p>
+<p>The underground flow direction arrows (both types are shown in the image below) were digitized as lines and then
+styled into arrows rather than being digitized as points with angles of direction. This was done as the digitized lines gave
+a more accurate result than trying to digitize a central point for each arrow and then assigning direction values.
+<img alt="Underground water arrows" src="../images/moz_img/underground_water_features_arrows.png" /></p>
+<h5 id="water-quality-features">Water Quality Features<a class="headerlink" href="#water-quality-features" title="Permanent link">&para;</a></h5>
+<p>The Water Quality features were digitized as points, lines, or polygons depending on how they were represented on the
+original maps. The lines are labelled with their residue values.</p>
+<table>
+<thead>
+<tr>
+<th>Portuguese Features</th>
+<th>English Features</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img alt="Water quality Features Port" src="../images/moz_img/water_quality_features_port.png" /></td>
+<td><img alt="Water quality Features Eng" src="../images/moz_img/water_quality_features_eng.png" /></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>The bottom feature with a zero [0] feature count is the <code>Else</code> rule to catch any features that have been digitized but
+have not been assigned values in the attribute table. The <code>Else</code> rule was used for digitizing and, at the client's
+request, is not included in the final project.</p>
+</blockquote>
+<p>The residue values are labels that are parallel to the digitized lines.
+<img alt="residue lines" src="../images/moz_img/residue_lines.png" /></p>
+<h5 id="intakes-and-works-features">Intakes and Works Features<a class="headerlink" href="#intakes-and-works-features" title="Permanent link">&para;</a></h5>
+<p>All of the Intakes and Works features were digitized as points with styled labels. The holes with indication of the tapped
+layer (ks) and exploration flow are labelled with their flow in the layers list to avoid lengthy labels. Where known on the
+original map, the tapped layer is also part of the labelling on the digitized map.</p>
+<table>
+<thead>
+<tr>
+<th>Portuguese Features</th>
+<th>English Features</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img alt="I and W Features Port" src="../images/moz_img/i_and_w_features_port.png" /></td>
+<td><img alt="I and W Features Eng" src="../images/moz_img/i_and_w_features_eng.png" /></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>The bottom feature with a zero [0] feature count is the <code>Else</code> rule to catch any features that have been digitized but
+have not been assigned values in the attribute table. The <code>Else</code> rule was used for digitizing and, at the client's
+request, is not included in the final project.</p>
+</blockquote>
+<p>Where known from the original map, the tapped layers are displayed to the left of the digitized features.
+<img alt="tapped layer" src="../images/moz_img/tapped_layer.png" /></p>
+<h3 id="zimbabwe-cartography">Zimbabwe Cartography<a class="headerlink" href="#zimbabwe-cartography" title="Permanent link">&para;</a></h3>
+<h4 id="zimbabwe-legend">Zimbabwe Legend<a class="headerlink" href="#zimbabwe-legend" title="Permanent link">&para;</a></h4>
+<p>The Zimbabwe legend does not contain multiple types of symbols that needed to be matched but the digitized symbols
+were made to match the original legend as closely as possible. There were however, over twice as many many features
+to digitize in Zimbabwe compared to Mozambique so it was a prolonged task.</p>
+<p><img alt="zim original legend" src="../images/zim_img/zim_legend_original.png" /></p>
+<h4 id="zimbabwe-digitized-layers">Zimbabwe Digitized Layers<a class="headerlink" href="#zimbabwe-digitized-layers" title="Permanent link">&para;</a></h4>
+<p>The image below depicts the vectorized features of Zimbabwe.
+<img alt="Zimbabwe Vector Features" src="../images/zim_img/zim_digitized_features.png" /></p>
+<p>The features were digitized and then styled using 'Map units' so that the styling was consistent with the original map and
+didn't vary greatly through the various scales as the map was viewed.</p>
+<h5 id="number-of-features-digitized_1">Number of features digitized<a class="headerlink" href="#number-of-features-digitized_1" title="Permanent link">&para;</a></h5>
+<p>The image below shows the break down of the 11576 digitized features in Zimbabwe:
+<img alt="Zim feature count" src="../images/zim_img/zim_feature_count.png" /></p>
+<h5 id="the-hydrogeological-features">The Hydrogeological Features<a class="headerlink" href="#the-hydrogeological-features" title="Permanent link">&para;</a></h5>
+<p>The hydrogeological features were all styled polygons to mimic the original maps.</p>
+<p><img alt="Zim Hydro features" src="../images/zim_img/zim_hydro_features.png" /></p>
+<blockquote>
+<p>The bottom feature with a zero [0] feature count is the <code>Else</code> rule to catch any features that have been digitized but
+have not been assigned values in the attribute table. The <code>Else</code> rule was used for digitizing and, at the client's
+request, is not included in the final project.</p>
+</blockquote>
+<h5 id="the-geological-features">The Geological Features<a class="headerlink" href="#the-geological-features" title="Permanent link">&para;</a></h5>
+<p>The geological features were split into lines and polygons depending on how the feature appeared on the original map.</p>
+<p><img alt="Zim geology features" src="../images/zim_img/zim_geology_features.png" /></p>
+<blockquote>
+<p>The bottom feature with a zero [0] feature count is the <code>Else</code> rule to catch any features that have been digitized but
+have not been assigned values in the attribute table. The <code>Else</code> rule was used for digitizing and, at the client's
+request, is not included in the final project.</p>
+</blockquote>
+
+
+
+
+              
+            </article>
+            
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+          </div>
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href=".." class="md-footer__link md-footer__link--prev" aria-label="Previous: Home" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Home
+            </div>
+          </div>
+        </a>
+      
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Kartoza and IGRAC
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+      
+      
+    
+    <a href="https://github.com/kartoza" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+    
+    
+      
+      
+    
+    <a href="https://hub.docker.com/r/kartoza/" target="_blank" rel="noopener" title="hub.docker.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M349.9 236.3h-66.1v-59.4h66.1v59.4zm0-204.3h-66.1v60.7h66.1V32zm78.2 144.8H362v59.4h66.1v-59.4zm-156.3-72.1h-66.1v60.1h66.1v-60.1zm78.1 0h-66.1v60.1h66.1v-60.1zm276.8 100c-14.4-9.7-47.6-13.2-73.1-8.4-3.3-24-16.7-44.9-41.1-63.7l-14-9.3-9.3 14c-18.4 27.8-23.4 73.6-3.7 103.8-8.7 4.7-25.8 11.1-48.4 10.7H2.4c-8.7 50.8 5.8 116.8 44 162.1 37.1 43.9 92.7 66.2 165.4 66.2 157.4 0 273.9-72.5 328.4-204.2 21.4.4 67.6.1 91.3-45.2 1.5-2.5 6.6-13.2 8.5-17.1l-13.3-8.9zm-511.1-27.9h-66v59.4h66.1v-59.4zm78.1 0h-66.1v59.4h66.1v-59.4zm78.1 0h-66.1v59.4h66.1v-59.4zm-78.1-72.1h-66.1v60.1h66.1v-60.1z"/></svg>
+    </a>
+  
+    
+    
+      
+      
+    
+    <a href="https://twitter.com/KartozaGeo" target="_blank" rel="noopener" title="twitter.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+    </a>
+  
+    
+    
+      
+      
+    
+    <a href="https://kartoza.com" target="_blank" rel="noopener" title="kartoza.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"/></svg>
+    </a>
+  
+    
+    
+      
+      
+    
+    <a href="https://kartoza.com" target="_blank" rel="noopener" title="kartoza.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M512 256c0 141.4-114.6 256-256 256S0 397.4 0 256 114.6 0 256 0s256 114.6 256 256zM177.8 63.19l10 17.43c2.7 4.84 4.2 10.31 4.2 15.88v41.4c0 3.9 1.6 7.7 4.3 10.4 6.3 6.3 16.5 4.8 22-1.2l13.6-17c4.7-5.9 12.9-7.7 19.7-4.3l15.2 7.6c3.4 1.7 6.3 2.6 11 2.6 6.5 0 12.8-2.6 17.4-7.2l3.9-3.9c2.9-3.8 7.4-3.7 11-1.8l29.3 14.6c7.7 3.9 12.6 11.8 12.6 20.4 0 10.5-7.1 19.7-17.3 22.2l-35.4 8.9c-7.4 1.8-15.1 1.5-23.2-.9l-32-10.6c-2.4-1.1-5.9-1.7-9.3-1.7-7 0-14.7 2.3-19.4 6.5L176 212c-10.1 7.6-16 19.4-16 32v28c0 26.5 21.5 48 48 48h32c8.8 0 16 7.2 16 16v48c0 17.7 14.3 32 32 32 10.1 0 19.6-4.7 25.6-12.8l25.6-34.1c8.3-12 12.8-24.6 12.8-38.4v-12.1c0-3.9 2.6-7.3 6.4-8.2l5.3-1.3c11.9-3 20.3-13.7 20.3-26 0-8-2.8-13.9-7.8-18.9l-33.5-33.5c-4.6-4.6-4.6-9.7 0-13.4 5.7-5.7 14.1-7.7 21.8-5.1l14.1 4.7c12.3 3.2 25.7-1.5 31.5-13.1 3.5-7 11.2-10.7 18-9.2l28.3 5.5C431.1 112.4 351.5 48 256 48c-27.7 0-54.9 5.4-78.2 15.19z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["content.code.annotate", "content.tabs.link", "header.autohide", "navigation.expand", "navigation.indexes", "navigation.instant", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../assets/javascripts/workers/search.ecf98df9.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.9c69f0bc.min.js"></script>
+      
+        <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
+      
+        <script src="../js/tablesort.js"></script>
+      
+    
+  </body>
+</html>
