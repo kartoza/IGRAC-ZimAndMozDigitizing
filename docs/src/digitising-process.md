@@ -48,13 +48,14 @@ into QGIS and doing some investigation. The following conclusion were establishe
 The custom CRS using the Tete datum worked but, due to lack of information on the scanned images, was not
 accurate for georeferencing. A new custom CRS based on the WGS84 datum was made using the proj4 string:
 
-    ```py
-    +proj=lcc +lat_0=0 +lon_0=35.5 +lat_1=-14 +lat_2=-24 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs
-    ```
+```py
++proj=lcc +lat_0=0 +lon_0=35.5 +lat_1=-14 +lat_2=-24 +x_0=0 +y_0=0 +datum=WGS84
++units=m +no_defs
+```
 
-  The new CRS was made to save having to perform datum transformations in the future. It was then decided that
-  georeferencing would be done using the GAUL dataset for reference points because a graticule transformation was
-  not possible.
+> The new CRS was made to save having to perform datum transformations in the future. It was then decided that
+> georeferencing would be done using the GAUL dataset for reference points because a graticule transformation was
+> not possible.
 
 ### Georeferencing Mozambique Southern Region
 
@@ -177,15 +178,14 @@ After loading the raster images into QGIS and doing some investigation. The foll
   projected CRS for better georeferencing. The closest option found during research was a report from UNESCO
   from 1995 (Hydrogeological Maps A Guide and Standard Legend. Vol. 17., by Struckmeier, Wilhelm F, and Jean
   Margat) referencing the Zimbabwe Hydrogeological maps stating that "preferably UTM grid" was used for map
-  locations. Using this information, a custom tmerc (Transverse mercator) projection system was made using the proj
-  string:
+  locations. The Central Meridian (lon_0) and the Latitude of Origin (lat_0) were taken from the four Zimbabwe sheets
+  and the **+a** and **+rf** values are for the Arc 1950 datum. Using this information, a custom tmerc (Transverse
+  mercator) projection system was made using the proj4 string:
 
-    ```py
-    Custom CRS: +proj=tmerc +lat_0=-19 +lon_0=30 +k=1 +x_0=0 +y_0=0 +a=6378249.145 +rf=293.4663077 +units=m +no_defs
-    ```
-
-  The Central Meridian (lon_0) and the Latitude of Origin (lat_0) were taken from the four Zimbabwe sheets and the
-  **+a** and **+rf** values are for the Arc 1950 datum.
+```py
++proj=tmerc +lat_0=-19 +lon_0=30 +k=1 +x_0=0 +y_0=0 +a=6378249.145 +rf=293.4663077 
++units=m +no_defs
+```
 
 #### Georeferencing Parameters for the four sheets
 
@@ -511,6 +511,7 @@ are also embedded in the projects and can be extracted to file.
 ##### Number of features digitized
 
 The images below shows the break down of the 5377 digitized features in Mozambique:
+
 | Portuguese Features | English Features |
 |---------------------|------------------|
 | ![Mozambique Portuguese Features](images/moz_img/moz_portuguese_features.png) | ![Mozambique English Features](images/moz_img/moz_english_features.png) |
@@ -584,6 +585,7 @@ a more accurate result than trying to digitize a central point for each arrow an
 
 The Water Quality features were digitized as points, lines, or polygons depending on how they were represented on the
 original maps. The lines are labelled with their residue values.
+
 | Portuguese Features | English Features |
 |---------------------|------------------|
 | ![Water quality Features Port](images/moz_img/water_quality_features_port.png) | ![Water quality Features Eng](images/moz_img/water_quality_features_eng.png) |
@@ -600,6 +602,7 @@ The residue values are labels that are parallel to the digitized lines.
 All of the Intakes and Works features were digitized as points with styled labels. The holes with indication of the tapped
 layer (ks) and exploration flow are labelled with their flow in the layers list to avoid lengthy labels. Where known on the
 original map, the tapped layer is also part of the labelling on the digitized map.
+
 | Portuguese Features | English Features |
 |---------------------|------------------|
 | ![I and W Features Port](images/moz_img/i_and_w_features_port.png) | ![I and W Features Eng](images/moz_img/i_and_w_features_eng.png) |  
